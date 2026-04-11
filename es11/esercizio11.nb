@@ -1,0 +1,2079 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     99125,       2071]
+NotebookOptionsPosition[     97964,       2043]
+NotebookOutlinePosition[     98394,       2060]
+CellTagsIndexPosition[     98351,       2057]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{GridBox[{
+    {
+     RowBox[{"data", " ", "=", " ", 
+      RowBox[{"Import", "[", 
+       RowBox[{
+       "\"\<E:\\\\Alessio\\\\Desktop\\\\Computazionale\\\\es11\\\\data.txt\>\"\
+", ",", "\"\<Table\>\""}], "]"}]}]},
+    {"\[IndentingNewLine]"}
+   }], ";"}]], "Input",
+ CellChangeTimes->{{3.8751585359306583`*^9, 3.875158576984193*^9}, {
+   3.875158847565158*^9, 3.8751588529387274`*^9}, {3.8758425968471*^9, 
+   3.8758425992854223`*^9}, {3.875848282820513*^9, 3.875848290620618*^9}, 
+   3.8770594282700624`*^9, 3.877576972057599*^9, 3.8776315698993635`*^9, 
+   3.8780599091867857`*^9, 3.8799957643936634`*^9, {3.8800856137516394`*^9, 
+   3.880085614298462*^9}, {3.880125297572847*^9, 3.880125359945667*^9}, 
+   3.880693300430973*^9, 3.901689720019659*^9},
+ CellLabel->
+  "In[1081]:=",ExpressionUUID->"fad7a2a8-e2b5-4abf-9dd3-85281d189da2"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"M1", " ", "=", " ", 
+   RowBox[{"Transpose", "[", 
+    RowBox[{
+     RowBox[{"Take", "[", "data", "]"}], "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", " ", 
+       RowBox[{"{", "2", "}"}]}], "]"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"M2", " ", "=", " ", 
+   RowBox[{"Transpose", "[", 
+    RowBox[{
+     RowBox[{"Take", "[", "data", "]"}], "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", " ", 
+       RowBox[{"{", "3", "}"}]}], "]"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"M3", " ", "=", " ", 
+   RowBox[{"Transpose", "[", 
+    RowBox[{
+     RowBox[{"Take", "[", "data", "]"}], "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", " ", 
+       RowBox[{"{", "4", "}"}]}], "]"}], "]"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8806933163505216`*^9, 3.88069331687057*^9}, {
+  3.880693426060587*^9, 3.8806934300107355`*^9}, {3.901192497580179*^9, 
+  3.901192497706033*^9}, {3.9011947320059805`*^9, 3.9011947323979936`*^9}, {
+  3.901253982458317*^9, 3.9012540006848545`*^9}, {3.9016897159823084`*^9, 
+  3.90168971753386*^9}},
+ CellLabel->
+  "In[1082]:=",ExpressionUUID->"fa0b648f-f410-498b-b9fd-78335742fd9f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f1", " ", "=", " ", 
+    RowBox[{
+     RowBox[{"Exp", "[", 
+      RowBox[{"-", "x"}], "]"}], "/", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       RowBox[{"Exp", "[", 
+        RowBox[{"-", "2"}], "]"}]}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Integrate", "[", 
+    RowBox[{"f1", ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "2"}], "}"}]}], "]"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{"f1", ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "2"}], "}"}], ",", " ", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "1.2"}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"Histogram", "[", 
+    RowBox[{"M1", ",", " ", "100", ",", "\"\<PDF\>\""}], "]"}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.8801235170382705`*^9, 3.880123541370191*^9}, {
+   3.8801239501542115`*^9, 3.880123953866253*^9}, 3.8801264735208187`*^9, {
+   3.880693519920293*^9, 3.8806935315003633`*^9}, {3.9012543948810825`*^9, 
+   3.9012544158073797`*^9}, {3.9012549623787117`*^9, 
+   3.9012549848461995`*^9}, {3.9012553757179956`*^9, 
+   3.9012553759694014`*^9}, {3.901255475388002*^9, 3.9012555160909758`*^9}, {
+   3.901255576783511*^9, 3.9012556433094893`*^9}, {3.9012557003991838`*^9, 
+   3.901255720581414*^9}, {3.9012558498907833`*^9, 3.901255866008952*^9}, 
+   3.9012559522814255`*^9, {3.9012559876796703`*^9, 3.9012559895136676`*^9}, {
+   3.901256023606063*^9, 3.9012560281559534`*^9}, {3.9012562106080585`*^9, 
+   3.9012562286924133`*^9}, 3.9012562596881495`*^9, {3.901256298441957*^9, 
+   3.901256336656062*^9}, 3.901256439559083*^9, {3.9012568298862066`*^9, 
+   3.901256835323406*^9}, {3.9012572218909287`*^9, 3.9012572521924667`*^9}, {
+   3.901257313327283*^9, 3.9012573203603573`*^9}, {3.9012573521219378`*^9, 
+   3.9012573882840753`*^9}, {3.9016034341954346`*^9, 3.901603441442766*^9}, {
+   3.901603516402306*^9, 3.9016035181573668`*^9}, {3.901603552225309*^9, 
+   3.901603552588826*^9}, {3.901604393506033*^9, 3.901604396607628*^9}, {
+   3.9016047770165896`*^9, 3.9016047775580487`*^9}, {3.901604843255189*^9, 
+   3.9016048688844337`*^9}, 3.901689553474103*^9, 3.901689600780895*^9, 
+   3.9016896541093283`*^9, 3.9016897651165514`*^9, {3.9016904803671675`*^9, 
+   3.9016904805881786`*^9}},
+ CellLabel->
+  "In[1085]:=",ExpressionUUID->"368e4453-cc4e-4f71-90e7-bad9e27a3390"],
+
+Cell[BoxData[
+ GraphicsBox[{{{{}, {}, 
+     TagBox[
+      {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[1.6], 
+       Opacity[1.], LineBox[CompressedData["
+1:eJwVx3k41HkAx/Fx9DSlFDYZVjUt5UgsSsfaT8XmzpJWNuEhhe2klkQ1PVRK
+q+3xYJfKVesotI49kOLb1Mg4GkdqGMZgGMwR4yh+2/7xfl7Pmxl8yjtUlUaj
+eXzuf11DxW3PRkK/HWtjZuixFFB30D8tYDjCPaRzyuqiAjb3M7LKGT6IiHF6
+5XJBATdu1593GUdwY2DV67hzCvgema69wzgL/R9C9orDFeixvOZwi5GAm3y2
+Woe3AtmrPK/eYKSinxajv8hYARa9fGMSIx/nTDRfVjfKcdAvp1Qmr4D9IY7N
+5DI5NCiWv9OaOjzVTA0bDJbB2GtC3HCT4Khh4Gq7RCmim7cjY5IDTrr0pIfd
+BFZXaPWqqLQgeX78woZl46gSOjS1fPMGj9YtONI6JKiPuGvgN9aO1k2ug1+X
+jWJqg/2Kxye6kKSc5I0VjkB1tnilgfE7zL/w8RzMEGMrFVS1v4SPkZn1unvy
+h9GUYNvMNhPAyyTSsbB2CGtvS2YLJ/pwmnOwNIQ7CMm0oLfDSojsa2pFxkoR
+8kerGzV/GcC+8PxEa10RNA3/kIpEIhgcX6g75TCA5PDKo9lGQzCRbGgtviqE
+clexKOzSMHKMNL7Tq+/HWWtSodsgRqB2nsOsVj8EJeRmG3MUHrXdnbwf+/Ax
+oj3TNFYCNispdMZfAPPdixeOVo8h+lrzZTuTXjjlMo89WT2BKHv59p4hPqIN
+A9f3+0sRMzlkOsp+j01jBzS6PGR4uJ/jevmvd9BZIaOTORn+Wfp9en1WN9Tr
+Mku/ypLjU6dJ57n7b/GTbXX3EjcFhKYHBqbTu1DsEpz9VKlAdXnoR1p2J6Yk
++iuH0j7AT5Y/N/y8A5X7ndRSHSfhMltUW/SuHZecE+9XDE1C1dOsN1ajHcwe
+17d5iVNIpu/R2ezMww67hFSGtRKNrzqaCuLewH9Ny6wKT4n3h/JOHmS3Yarx
+lvA0axrxMklZDr0NGeoBZ72NZtDy8zrbnIBW6PRW5qqSGfhIy582xrVgUTzL
+Z/uZWVj6p25ZZNkMWmFAqVB7DnK3Lpt5NS4ify+9pV0/h1QXvYvzTa9Ra36d
+rnXyI5qjuPE+BY3Qco3cdEXzEwrrlmRZ5nLAt2jlna/5hCT/EmvPX1+h7B6M
+RAHzYD7W7edmvcTh0q1ahgvz0KCbcw9UsXE5MYfFL1oAdzbG0479Ao/Fhpma
+7hR8i1buNZASXL+bGNS7j0JmdUHPCQnBEe9x4xIvCsc2Zus/Hyb4sqamzMOX
+gl/ftoTwPoIbKYfYycGf/8mgdn0bQdjW3+RLz1NI9+Sr36kgWJ/whfPihxTG
+4hvOPIolWNgWt7yrgIJbUFC8TjRB9/jAm4fFFPTaidmFKILbvuWH9z6hwH8Z
+GeF+nIAy845KrKEgDnCOVR4m4Lel3FPjUWhO020I203w99XpEF4HhVUWgz3d
+9gSpOwNN895SyJ2qynDbQeD2YHPFnl4K7uUfxq1sCP6N4XJYIxS2LH+mo2ZM
+kGaxJcVrjEIs0szPMwnOCLN8mFIKRZ4pQqkhgYn7ccGzSQpr7WMtBLoE6irt
++benKXjvsn3uq0PQV7kzImiOwr4TOR9aVxDURORZWs1T8Bh4QFyXEaSv1Zii
+KAqn2Ma2L+gE/wHzsn+B
+        "]]},
+      Annotation[#, "Charting`Private`Tag$325243#1"]& ]}, {}}, {
+    {RGBColor[0.987148, 0.8073604000000001, 0.49470040000000004`], EdgeForm[
+     Opacity[0.]], {{}, 
+      {RGBColor[0.97858, 0.678934, 0.157834], Opacity[0.5], EdgeForm[Opacity[
+       0.]], RectangleBox[{0., 0.}, 
+        NCache[{0.02, Rational[97, 100]}, {0.02, 0.97}],
+        RoundingRadius->0], 
+       RectangleBox[{0.02, 0.}, NCache[{0.04, Rational[23, 20]}, {0.04, 1.15}],
+        RoundingRadius->0], 
+       RectangleBox[{0.04, 0.}, 
+        NCache[{0.06, Rational[107, 100]}, {0.06, 1.07}],
+        RoundingRadius->0], 
+       RectangleBox[{0.06, 0.}, NCache[{0.08, Rational[24, 25]}, {0.08, 0.96}],
+        RoundingRadius->0], 
+       RectangleBox[{0.08, 0.}, NCache[{0.1, Rational[43, 40]}, {0.1, 1.075}],
+        RoundingRadius->0], 
+       RectangleBox[{0.1, 0.}, NCache[{0.12, Rational[59, 50]}, {0.12, 1.18}],
+        RoundingRadius->0], 
+       RectangleBox[{0.12, 0.}, NCache[{0.14, Rational[49, 50]}, {0.14, 0.98}],
+        RoundingRadius->0], 
+       RectangleBox[{0.14, 0.}, 
+        NCache[{0.16, Rational[189, 200]}, {0.16, 0.945}],
+        RoundingRadius->0], 
+       RectangleBox[{0.16, 0.}, 
+        NCache[{0.18, Rational[211, 200]}, {0.18, 1.055}],
+        RoundingRadius->0], 
+       RectangleBox[{0.18, 0.}, NCache[{0.2, Rational[97, 100]}, {0.2, 0.97}],
+        RoundingRadius->0], 
+       RectangleBox[{0.2, 0.}, NCache[{0.22, Rational[39, 40]}, {0.22, 0.975}],
+        RoundingRadius->0], 
+       RectangleBox[{0.22, 0.}, 
+        NCache[{0.24, Rational[97, 100]}, {0.24, 0.97}],
+        RoundingRadius->0], 
+       RectangleBox[{0.24, 0.}, 
+        NCache[{0.26, Rational[97, 100]}, {0.26, 0.97}],
+        RoundingRadius->0], 
+       RectangleBox[{0.26, 0.}, 
+        NCache[{0.28, Rational[201, 200]}, {0.28, 1.005}],
+        RoundingRadius->0], 
+       RectangleBox[{0.28, 0.}, NCache[{0.3, Rational[43, 50]}, {0.3, 0.86}],
+        RoundingRadius->0], 
+       RectangleBox[{0.3, 0.}, NCache[{0.32, Rational[21, 25]}, {0.32, 0.84}],
+        RoundingRadius->0], 
+       RectangleBox[{0.32, 0.}, 
+        NCache[{0.34, Rational[29, 40]}, {0.34, 0.725}],
+        RoundingRadius->0], 
+       RectangleBox[{0.34, 0.}, 
+        NCache[{0.36, Rational[93, 100]}, {0.36, 0.93}],
+        RoundingRadius->0], 
+       RectangleBox[{0.36, 0.}, NCache[{0.38, Rational[3, 4]}, {0.38, 0.75}],
+        RoundingRadius->0], 
+       RectangleBox[{0.38, 0.}, NCache[{0.4, Rational[19, 25]}, {0.4, 0.76}],
+        RoundingRadius->0], 
+       RectangleBox[{0.4, 0.}, NCache[{0.42, Rational[21, 25]}, {0.42, 0.84}],
+        RoundingRadius->0], 
+       RectangleBox[{0.42, 0.}, 
+        NCache[{0.44, Rational[139, 200]}, {0.44, 0.695}],
+        RoundingRadius->0], 
+       RectangleBox[{0.44, 0.}, 
+        NCache[{0.46, Rational[119, 200]}, {0.46, 0.595}],
+        RoundingRadius->0], 
+       RectangleBox[{0.46, 0.}, 
+        NCache[{0.48, Rational[149, 200]}, {0.48, 0.745}],
+        RoundingRadius->0], 
+       RectangleBox[{0.48, 0.}, 
+        NCache[{0.5, Rational[153, 200]}, {0.5, 0.765}],
+        RoundingRadius->0], 
+       RectangleBox[{0.5, 0.}, NCache[{0.52, Rational[4, 5]}, {0.52, 0.8}],
+        RoundingRadius->0], 
+       RectangleBox[{0.52, 0.}, 
+        NCache[{0.54, Rational[63, 100]}, {0.54, 0.63}],
+        RoundingRadius->0], 
+       RectangleBox[{0.54, 0.}, 
+        NCache[{0.56, Rational[29, 40]}, {0.56, 0.725}],
+        RoundingRadius->0], 
+       RectangleBox[{0.56, 0.}, 
+        NCache[{0.58, Rational[61, 100]}, {0.58, 0.61}],
+        RoundingRadius->0], 
+       RectangleBox[{0.58, 0.}, NCache[{0.6, Rational[3, 5]}, {0.6, 0.6}],
+        RoundingRadius->0], 
+       RectangleBox[{0.6, 0.}, 
+        NCache[{0.62, Rational[153, 200]}, {0.62, 0.765}],
+        RoundingRadius->0], 
+       RectangleBox[{0.62, 0.}, 
+        NCache[{0.64, Rational[129, 200]}, {0.64, 0.645}],
+        RoundingRadius->0], 
+       RectangleBox[{0.64, 0.}, 
+        NCache[{0.66, Rational[121, 200]}, {0.66, 0.605}],
+        RoundingRadius->0], 
+       RectangleBox[{0.66, 0.}, NCache[{0.68, Rational[31, 50]}, {0.68, 0.62}],
+        RoundingRadius->0], 
+       RectangleBox[{0.68, 0.}, 
+        NCache[{0.7, Rational[127, 200]}, {0.7, 0.635}],
+        RoundingRadius->0], 
+       RectangleBox[{0.7, 0.}, NCache[{0.72, Rational[23, 40]}, {0.72, 0.575}],
+        RoundingRadius->0], 
+       RectangleBox[{0.72, 0.}, NCache[{0.74, Rational[1, 2]}, {0.74, 0.5}],
+        RoundingRadius->0], 
+       RectangleBox[{0.74, 0.}, 
+        NCache[{0.76, Rational[59, 100]}, {0.76, 0.59}],
+        RoundingRadius->0], 
+       RectangleBox[{0.76, 0.}, 
+        NCache[{0.78, Rational[107, 200]}, {0.78, 0.535}],
+        RoundingRadius->0], 
+       RectangleBox[{0.78, 0.}, NCache[{0.8, Rational[43, 100]}, {0.8, 0.43}],
+        RoundingRadius->0], 
+       RectangleBox[{0.8, 0.}, 
+        NCache[{0.82, Rational[111, 200]}, {0.82, 0.555}],
+        RoundingRadius->0], 
+       RectangleBox[{0.82, 0.}, NCache[{0.84, Rational[13, 25]}, {0.84, 0.52}],
+        RoundingRadius->0], 
+       RectangleBox[{0.84, 0.}, 
+        NCache[{0.86, Rational[53, 100]}, {0.86, 0.53}],
+        RoundingRadius->0], 
+       RectangleBox[{0.86, 0.}, 
+        NCache[{0.88, Rational[91, 200]}, {0.88, 0.455}],
+        RoundingRadius->0], 
+       RectangleBox[{0.88, 0.}, NCache[{0.9, Rational[91, 200]}, {0.9, 0.455}],
+        RoundingRadius->0], 
+       RectangleBox[{0.9, 0.}, NCache[{0.92, Rational[43, 100]}, {0.92, 0.43}],
+        RoundingRadius->0], 
+       RectangleBox[{0.92, 0.}, 
+        NCache[{0.94, Rational[37, 100]}, {0.94, 0.37}],
+        RoundingRadius->0], 
+       RectangleBox[{0.94, 0.}, NCache[{0.96, Rational[2, 5]}, {0.96, 0.4}],
+        RoundingRadius->0], 
+       RectangleBox[{0.96, 0.}, NCache[{0.98, Rational[12, 25]}, {0.98, 0.48}],
+        RoundingRadius->0], 
+       RectangleBox[{0.98, 0.}, NCache[{1., Rational[87, 200]}, {1., 0.435}],
+        RoundingRadius->0], 
+       RectangleBox[{1., 0.}, NCache[{1.02, Rational[89, 200]}, {1.02, 0.445}],
+        RoundingRadius->0], 
+       RectangleBox[{1.02, 0.}, 
+        NCache[{1.04, Rational[97, 200]}, {1.04, 0.485}],
+        RoundingRadius->0], 
+       RectangleBox[{1.04, 0.}, 
+        NCache[{1.06, Rational[39, 100]}, {1.06, 0.39}],
+        RoundingRadius->0], 
+       RectangleBox[{1.06, 0.}, NCache[{1.08, Rational[7, 20]}, {1.08, 0.35}],
+        RoundingRadius->0], 
+       RectangleBox[{1.08, 0.}, NCache[{1.1, Rational[9, 25]}, {1.1, 0.36}],
+        RoundingRadius->0], 
+       RectangleBox[{1.1, 0.}, 
+        NCache[{1.12, Rational[87, 200]}, {1.12, 0.435}],
+        RoundingRadius->0], 
+       RectangleBox[{1.12, 0.}, NCache[{1.14, Rational[17, 50]}, {1.14, 0.34}],
+        RoundingRadius->0], 
+       RectangleBox[{1.14, 0.}, NCache[{1.16, Rational[3, 8]}, {1.16, 0.375}],
+        RoundingRadius->0], 
+       RectangleBox[{1.16, 0.}, NCache[{1.18, Rational[3, 10]}, {1.18, 0.3}],
+        RoundingRadius->0], 
+       RectangleBox[{1.18, 0.}, NCache[{1.2, Rational[3, 8]}, {1.2, 0.375}],
+        RoundingRadius->0], 
+       RectangleBox[{1.2, 0.}, NCache[{1.22, Rational[29, 100]}, {1.22, 0.29}],
+        RoundingRadius->0], 
+       RectangleBox[{1.22, 0.}, NCache[{1.24, Rational[9, 25]}, {1.24, 0.36}],
+        RoundingRadius->0], 
+       RectangleBox[{1.24, 0.}, NCache[{1.26, Rational[9, 25]}, {1.26, 0.36}],
+        RoundingRadius->0], 
+       RectangleBox[{1.26, 0.}, 
+        NCache[{1.28, Rational[61, 200]}, {1.28, 0.305}],
+        RoundingRadius->0], 
+       RectangleBox[{1.28, 0.}, NCache[{1.3, Rational[7, 25]}, {1.3, 0.28}],
+        RoundingRadius->0], 
+       RectangleBox[{1.3, 0.}, 
+        NCache[{1.32, Rational[71, 200]}, {1.32, 0.355}],
+        RoundingRadius->0], 
+       RectangleBox[{1.32, 0.}, 
+        NCache[{1.34, Rational[33, 100]}, {1.34, 0.33}],
+        RoundingRadius->0], 
+       RectangleBox[{1.34, 0.}, NCache[{1.36, Rational[13, 50]}, {1.36, 0.26}],
+        RoundingRadius->0], 
+       RectangleBox[{1.36, 0.}, 
+        NCache[{1.38, Rational[31, 100]}, {1.38, 0.31}],
+        RoundingRadius->0], 
+       RectangleBox[{1.38, 0.}, NCache[{1.4, Rational[33, 100]}, {1.4, 0.33}],
+        RoundingRadius->0], 
+       RectangleBox[{1.4, 0.}, NCache[{1.42, Rational[11, 40]}, {1.42, 0.275}],
+        RoundingRadius->0], 
+       RectangleBox[{1.42, 0.}, 
+        NCache[{1.44, Rational[27, 100]}, {1.44, 0.27}],
+        RoundingRadius->0], 
+       RectangleBox[{1.44, 0.}, 
+        NCache[{1.46, Rational[51, 200]}, {1.46, 0.255}],
+        RoundingRadius->0], 
+       RectangleBox[{1.46, 0.}, 
+        NCache[{1.48, Rational[59, 200]}, {1.48, 0.295}],
+        RoundingRadius->0], 
+       RectangleBox[{1.48, 0.}, NCache[{1.5, Rational[57, 200]}, {1.5, 0.285}],
+        RoundingRadius->0], 
+       RectangleBox[{1.5, 0.}, NCache[{1.52, Rational[13, 50]}, {1.52, 0.26}],
+        RoundingRadius->0], 
+       RectangleBox[{1.52, 0.}, 
+        NCache[{1.54, Rational[53, 200]}, {1.54, 0.265}],
+        RoundingRadius->0], 
+       RectangleBox[{1.54, 0.}, 
+        NCache[{1.56, Rational[21, 100]}, {1.56, 0.21}],
+        RoundingRadius->0], 
+       RectangleBox[{1.56, 0.}, 
+        NCache[{1.58, Rational[21, 100]}, {1.58, 0.21}],
+        RoundingRadius->0], 
+       RectangleBox[{1.58, 0.}, NCache[{1.6, Rational[39, 200]}, {1.6, 0.195}],
+        RoundingRadius->0], 
+       RectangleBox[{1.6, 0.}, 
+        NCache[{1.62, Rational[43, 200]}, {1.62, 0.215}],
+        RoundingRadius->0], 
+       RectangleBox[{1.62, 0.}, NCache[{1.64, Rational[7, 50]}, {1.64, 0.14}],
+        RoundingRadius->0], 
+       RectangleBox[{1.64, 0.}, 
+        NCache[{1.66, Rational[19, 100]}, {1.66, 0.19}],
+        RoundingRadius->0], 
+       RectangleBox[{1.66, 0.}, 
+        NCache[{1.68, Rational[37, 200]}, {1.68, 0.185}],
+        RoundingRadius->0], 
+       RectangleBox[{1.68, 0.}, NCache[{1.7, Rational[41, 200]}, {1.7, 0.205}],
+        RoundingRadius->0], 
+       RectangleBox[{1.7, 0.}, NCache[{1.72, Rational[9, 40]}, {1.72, 0.225}],
+        RoundingRadius->0], 
+       RectangleBox[{1.72, 0.}, NCache[{1.74, Rational[6, 25]}, {1.74, 0.24}],
+        RoundingRadius->0], 
+       RectangleBox[{1.74, 0.}, 
+        NCache[{1.76, Rational[37, 200]}, {1.76, 0.185}],
+        RoundingRadius->0], 
+       RectangleBox[{1.76, 0.}, 
+        NCache[{1.78, Rational[39, 200]}, {1.78, 0.195}],
+        RoundingRadius->0], 
+       RectangleBox[{1.78, 0.}, NCache[{1.8, Rational[31, 200]}, {1.8, 0.155}],
+        RoundingRadius->0], 
+       RectangleBox[{1.8, 0.}, NCache[{1.82, Rational[9, 50]}, {1.82, 0.18}],
+        RoundingRadius->0], 
+       RectangleBox[{1.82, 0.}, NCache[{1.84, Rational[1, 5]}, {1.84, 0.2}],
+        RoundingRadius->0], 
+       RectangleBox[{1.84, 0.}, 
+        NCache[{1.86, Rational[17, 100]}, {1.86, 0.17}],
+        RoundingRadius->0], 
+       RectangleBox[{1.86, 0.}, 
+        NCache[{1.88, Rational[17, 100]}, {1.88, 0.17}],
+        RoundingRadius->0], 
+       RectangleBox[{1.88, 0.}, NCache[{1.9, Rational[3, 25]}, {1.9, 0.12}],
+        RoundingRadius->0], 
+       RectangleBox[{1.9, 0.}, 
+        NCache[{1.92, Rational[37, 200]}, {1.92, 0.185}],
+        RoundingRadius->0], 
+       RectangleBox[{1.92, 0.}, 
+        NCache[{1.94, Rational[41, 200]}, {1.94, 0.205}],
+        RoundingRadius->0], 
+       RectangleBox[{1.94, 0.}, 
+        NCache[{1.96, Rational[37, 200]}, {1.96, 0.185}],
+        RoundingRadius->0], 
+       RectangleBox[{1.96, 0.}, 
+        NCache[{1.98, Rational[47, 200]}, {1.98, 0.235}],
+        RoundingRadius->0], 
+       RectangleBox[{1.98, 0.}, NCache[{2., Rational[37, 200]}, {2., 0.185}],
+        RoundingRadius->
+         0]}, {}, {}}}, {{{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}}, {}}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  ImageSize->Large,
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "ScalingFunctions" -> None, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0., 1.9999999591836735`}, {0, 1.2}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {0, 0}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{
+  3.8801235433477297`*^9, {3.8801239507158318`*^9, 3.8801239546037593`*^9}, 
+   3.8801241324179697`*^9, 3.8801242153190994`*^9, 3.8801243178631296`*^9, 
+   3.8801243879373093`*^9, 3.8801246454529047`*^9, {3.8801246900921197`*^9, 
+   3.8801247125434165`*^9}, 3.880125173238872*^9, 3.880125276073951*^9, {
+   3.880125517285062*^9, 3.880125541742154*^9}, 3.880125618558181*^9, 
+   3.8801257329699364`*^9, 3.8801260166603756`*^9, 3.8801265646993732`*^9, {
+   3.8801275949092307`*^9, 3.880127624158252*^9}, 3.880693533300675*^9, 
+   3.9011925569666367`*^9, 3.9011947677749987`*^9, 3.901197497676855*^9, 
+   3.901254015255704*^9, 3.901254969671895*^9, 3.901255051737104*^9, 
+   3.901255172927167*^9, 3.901255266686593*^9, 3.9012553123728256`*^9, 
+   3.9012553576127095`*^9, 3.9012553924853945`*^9, {3.901255500666235*^9, 
+   3.9012555170556583`*^9}, {3.901255598482664*^9, 3.901255645381262*^9}, {
+   3.901255688577555*^9, 3.9012557767479944`*^9}, 3.9012559561064854`*^9, 
+   3.901255995643317*^9, 3.901256030390323*^9, 3.9012562630856714`*^9, 
+   3.9012563048608785`*^9, {3.901256338483265*^9, 3.9012563451203275`*^9}, 
+   3.9012564406703415`*^9, 3.901256836960394*^9, 3.9012569019190516`*^9, 
+   3.9012570044373064`*^9, {3.901257073088418*^9, 3.901257098481488*^9}, {
+   3.9012573619842567`*^9, 3.901257389387306*^9}, 3.901601408215906*^9, 
+   3.901602976149809*^9, 3.9016030179288187`*^9, 3.901603128447846*^9, {
+   3.9016034355956016`*^9, 3.9016034422125916`*^9}, 3.9016035192198715`*^9, 
+   3.9016035531198444`*^9, 3.9016043981385007`*^9, 3.9016047038939095`*^9, 
+   3.901604779307949*^9, {3.901604844439062*^9, 3.901604871107452*^9}, 
+   3.9016896038978987`*^9, {3.9016896991597505`*^9, 3.9016897223962016`*^9}, 
+   3.9016897760924163`*^9, 3.901690056219579*^9, 3.9016904532770386`*^9, 
+   3.9016904840939465`*^9},
+ CellLabel->
+  "Out[1086]=",ExpressionUUID->"834fd9cf-d474-4d57-9c78-6d6605f5d3a4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f2", " ", "=", " ", 
+    RowBox[{
+     RowBox[{"Exp", "[", 
+      RowBox[{"-", "x"}], "]"}], "/", 
+     RowBox[{"(", 
+      FractionBox["1", "\[ExponentialE]"], ")"}]}]}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Integrate", "[", 
+    RowBox[{"f2", ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "1", ",", "Infinity"}], "}"}]}], "]"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{"f2", ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "1", ",", "6"}], "}"}]}], "]"}], ",", 
+   RowBox[{"Histogram", "[", 
+    RowBox[{"M2", ",", "340", ",", "\"\<PDF\>\""}], "]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.880123983521466*^9, 3.88012401907685*^9}, 
+   3.880126494326685*^9, {3.880693542010607*^9, 3.8806935742202406`*^9}, {
+   3.9012550044071493`*^9, 3.901255047131567*^9}, {3.901255382495329*^9, 
+   3.9012553827474337`*^9}, {3.9012556617161283`*^9, 3.901255680904811*^9}, {
+   3.901255735730285*^9, 3.901255737503103*^9}, {3.9012558385542436`*^9, 
+   3.9012558390678053`*^9}, {3.90125587259409*^9, 3.90125587752826*^9}, 
+   3.901255948259385*^9, 3.901256142223714*^9, {3.901256363982274*^9, 
+   3.901256369995823*^9}, {3.901256862605196*^9, 3.9012568663215733`*^9}, {
+   3.9016048844156275`*^9, 3.9016048848558283`*^9}, {3.901689658428554*^9, 
+   3.90168968421647*^9}, {3.901690091502105*^9, 3.901690096668951*^9}, {
+   3.901690472460595*^9, 3.9016904728387995`*^9}, {3.901690544982403*^9, 
+   3.901690647568797*^9}},
+ CellLabel->
+  "In[1119]:=",ExpressionUUID->"ef8ab266-46be-4c84-8e7a-dd94ba5af4b4"],
+
+Cell[BoxData[
+ GraphicsBox[{{{{}, {}, 
+     TagBox[
+      {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[1.6], 
+       Opacity[1.], LineBox[CompressedData["
+1:eJwVkGs01AkcQIewysQMZv4eJdQmslbF0XSs3y+2ViF62ESp8UiptCbWaV7h
+GEs1UZJZr0Rqo8mMSJ5l9PIsTLKWtRFKywxSSGbbD/fcT/fLtQg6uStUnUQi
+eX3lf2utCzElkZSwMtepUaVSgIN2J81dSwkPOPs9WFMKCO7fTEklK8E2lFr1
+blgBD4UrNM2NlRBlx/IdaVUAe7RnHNYrwafWesfybAUoCnbKzoQowfjHqkwW
+QwHddDiqeqYEb79OZnnMONyaN65YuDgB0t0WJg7qYzDtGJnVumUKaliXXG8Y
+jkKPd9Tq6t4PUKPySGDkjEDA6aaN4mMfoVu7iLHu+BAIKLK0k8tmIEGRsLBr
+6yC4J4Wm+0hmQScv7Tgp5jWUnijqVzv8GVwSpVn1wf1QGeQqrTD4ApcrjpAj
+3XrBf2Oi9fnrC2Dmmb53PO9PaK91jBatJaFcNFEeTH4F9d4La9gfSTjs38kb
+6pdD7NFfzANr1TDSqIG3Z6IDDDZtcLZJV8fXPQaeAeR2mJzzKBYELsI6LUa7
+/0gbFLLKXRo3amBLTtj69KfNYMV6RtPT08SYZV65FpqNMM1ch2+6NLHEMdtO
+LH0CGdrvL1wr0ULTXyvDN4c/AsHVOfvx09/gnZovERK+DH4a8/9k6auNb4fN
+aEa5D6FbFqLmb7sYt+rcfnn6fS2UJz0KNJ9ejPyVKkMn82o4rBn9T1vbEvyw
+vVMxH3wfglmccnKmDl4+4+djRL8H34etbfNkktHmj2Kn94vL4Lm+rU40Yyk6
+PKsU62uXQvWd+CzbRbro3lXCpu+VAEfNxqelTxcdTMlnTQ6KYUkv2z2iTA/f
+pRzqmWMVwalOSpO3CwX7bJ5vPzl/Ezwuk+N7iyh4O//Qm85LhbDN6+6gPYWK
+X7KGWrlnC8CuyS4s8RQVvUS7HqvXXANefse8dz8VSZR9cvm/V2GSZeH82k0f
+fV65C/cos6E9VyQcluijuPMlYamRCV2yqqS7dAM8H+OV2SfMgIYiaWEc2wBV
+DTGMNwfSwWT8hbxh2ADv/3b/jDkjDTKss8StHoZIi6s5Vxd+EfgPhSKPSkN8
+zF9hb++VAp6mvoVNq2h4rbRqaYHdecCIpwHUZBoiz4iVJ0yG3GVBq1qmaRjd
+u2dL/lwirGy4eWVHAB2/pSY7Rj9PgJTvZDYddXS0lLhm0wfiIXRKo73RhsDG
+x3oDfguxwJROmienELjJr9kqopUP4fG757dfJNDOMGTq7QM+RO0ue0VOI1Dw
+wPnO0VI+JE5HX0i9QqBbrtsIN4MPtxmznzNyCNzHUS0fZfJhpl7VdaOYwJ/h
+1v6+TzxI7SALHz0lME+V5EVbw4PMghNHEhsJrHKaXbLNlAcFUW1u7s0Exp3j
+HI7X5cE9eupccxuBZRU9Y5rTXOj1NzjydS1qkn6Y9ZZxwWrQ2G1gkEBT+XD/
+2AEu2Jexza4PEZjao/Rj7+TCJsFfs6EjX/utJtvIW7jgaZUjeTdK4IneDQK0
+5QLrmLnZxASBf0tE1qNzHOA6x82WThFI3SA2yh/ngGDpgDxqmkBfduuxgwMc
+EJUUnJuZIXAysNphtJED+bEaYVVzBOqKXhRW1HKgeGeoK3eewO6W2MizUg6U
+WT5Z7rJAIJPJSg8q5EDd1OpZlYrA5npPPfydA/8BMkVE4Q==
+        "]]},
+      Annotation[#, "Charting`Private`Tag$332128#1"]& ]}, {}}, {
+    {RGBColor[0.987148, 0.8073604000000001, 0.49470040000000004`], EdgeForm[
+     Opacity[0.]], {{}, 
+      {RGBColor[0.97858, 0.678934, 0.157834], Opacity[0.5], EdgeForm[Opacity[
+       0.]], RectangleBox[{1., 0.}, 
+        NCache[{1.02, Rational[187, 200]}, {1.02, 0.935}],
+        RoundingRadius->0], 
+       RectangleBox[{1.02, 0.}, 
+        NCache[{1.04, Rational[91, 100]}, {1.04, 0.91}],
+        RoundingRadius->0], 
+       RectangleBox[{1.04, 0.}, 
+        NCache[{1.06, Rational[191, 200]}, {1.06, 0.955}],
+        RoundingRadius->0], 
+       RectangleBox[{1.06, 0.}, NCache[{1.08, Rational[19, 20]}, {1.08, 0.95}],
+        RoundingRadius->0], 
+       RectangleBox[{1.08, 0.}, 
+        NCache[{1.1, Rational[181, 200]}, {1.1, 0.905}],
+        RoundingRadius->0], 
+       RectangleBox[{1.1, 0.}, NCache[{1.12, Rational[51, 50]}, {1.12, 1.02}],
+        RoundingRadius->0], 
+       RectangleBox[{1.12, 0.}, 
+        NCache[{1.14, Rational[31, 40]}, {1.14, 0.775}],
+        RoundingRadius->0], 
+       RectangleBox[{1.14, 0.}, 
+        NCache[{1.16, Rational[177, 200]}, {1.16, 0.885}],
+        RoundingRadius->0], 
+       RectangleBox[{1.16, 0.}, 
+        NCache[{1.18, Rational[81, 100]}, {1.18, 0.81}],
+        RoundingRadius->0], 
+       RectangleBox[{1.18, 0.}, NCache[{1.2, Rational[37, 40]}, {1.2, 0.925}],
+        RoundingRadius->0], 
+       RectangleBox[{1.2, 0.}, 
+        NCache[{1.22, Rational[157, 200]}, {1.22, 0.785}],
+        RoundingRadius->0], 
+       RectangleBox[{1.22, 0.}, 
+        NCache[{1.24, Rational[81, 100]}, {1.24, 0.81}],
+        RoundingRadius->0], 
+       RectangleBox[{1.24, 0.}, NCache[{1.26, Rational[18, 25]}, {1.26, 0.72}],
+        RoundingRadius->0], 
+       RectangleBox[{1.26, 0.}, 
+        NCache[{1.28, Rational[179, 200]}, {1.28, 0.895}],
+        RoundingRadius->0], 
+       RectangleBox[{1.28, 0.}, NCache[{1.3, Rational[67, 100]}, {1.3, 0.67}],
+        RoundingRadius->0], 
+       RectangleBox[{1.3, 0.}, NCache[{1.32, Rational[69, 100]}, {1.32, 0.69}],
+        RoundingRadius->0], 
+       RectangleBox[{1.32, 0.}, 
+        NCache[{1.34, Rational[77, 100]}, {1.34, 0.77}],
+        RoundingRadius->0], 
+       RectangleBox[{1.34, 0.}, 
+        NCache[{1.36, Rational[81, 100]}, {1.36, 0.81}],
+        RoundingRadius->0], 
+       RectangleBox[{1.36, 0.}, NCache[{1.38, Rational[33, 50]}, {1.38, 0.66}],
+        RoundingRadius->0], 
+       RectangleBox[{1.38, 0.}, NCache[{1.4, Rational[27, 40]}, {1.4, 0.675}],
+        RoundingRadius->0], 
+       RectangleBox[{1.4, 0.}, 
+        NCache[{1.42, Rational[147, 200]}, {1.42, 0.735}],
+        RoundingRadius->0], 
+       RectangleBox[{1.42, 0.}, 
+        NCache[{1.44, Rational[139, 200]}, {1.44, 0.695}],
+        RoundingRadius->0], 
+       RectangleBox[{1.44, 0.}, 
+        NCache[{1.46, Rational[153, 200]}, {1.46, 0.765}],
+        RoundingRadius->0], 
+       RectangleBox[{1.46, 0.}, 
+        NCache[{1.48, Rational[121, 200]}, {1.48, 0.605}],
+        RoundingRadius->0], 
+       RectangleBox[{1.48, 0.}, NCache[{1.5, Rational[3, 5]}, {1.5, 0.6}],
+        RoundingRadius->0], 
+       RectangleBox[{1.5, 0.}, NCache[{1.52, Rational[5, 8]}, {1.52, 0.625}],
+        RoundingRadius->0], 
+       RectangleBox[{1.52, 0.}, 
+        NCache[{1.54, Rational[133, 200]}, {1.54, 0.665}],
+        RoundingRadius->0], 
+       RectangleBox[{1.54, 0.}, 
+        NCache[{1.56, Rational[111, 200]}, {1.56, 0.555}],
+        RoundingRadius->0], 
+       RectangleBox[{1.56, 0.}, NCache[{1.58, Rational[29, 50]}, {1.58, 0.58}],
+        RoundingRadius->0], 
+       RectangleBox[{1.58, 0.}, NCache[{1.6, Rational[14, 25]}, {1.6, 0.56}],
+        RoundingRadius->0], 
+       RectangleBox[{1.6, 0.}, 
+        NCache[{1.62, Rational[103, 200]}, {1.62, 0.515}],
+        RoundingRadius->0], 
+       RectangleBox[{1.62, 0.}, 
+        NCache[{1.64, Rational[49, 100]}, {1.64, 0.49}],
+        RoundingRadius->0], 
+       RectangleBox[{1.64, 0.}, 
+        NCache[{1.66, Rational[57, 100]}, {1.66, 0.57}],
+        RoundingRadius->0], 
+       RectangleBox[{1.66, 0.}, 
+        NCache[{1.68, Rational[51, 100]}, {1.68, 0.51}],
+        RoundingRadius->0], 
+       RectangleBox[{1.68, 0.}, 
+        NCache[{1.7, Rational[107, 200]}, {1.7, 0.535}],
+        RoundingRadius->0], 
+       RectangleBox[{1.7, 0.}, 
+        NCache[{1.72, Rational[99, 200]}, {1.72, 0.495}],
+        RoundingRadius->0], 
+       RectangleBox[{1.72, 0.}, 
+        NCache[{1.74, Rational[21, 40]}, {1.74, 0.525}],
+        RoundingRadius->0], 
+       RectangleBox[{1.74, 0.}, 
+        NCache[{1.76, Rational[89, 200]}, {1.76, 0.445}],
+        RoundingRadius->0], 
+       RectangleBox[{1.76, 0.}, 
+        NCache[{1.78, Rational[17, 40]}, {1.78, 0.425}],
+        RoundingRadius->0], 
+       RectangleBox[{1.78, 0.}, NCache[{1.8, Rational[21, 50]}, {1.8, 0.42}],
+        RoundingRadius->0], 
+       RectangleBox[{1.8, 0.}, NCache[{1.82, Rational[39, 100]}, {1.82, 0.39}],
+        RoundingRadius->0], 
+       RectangleBox[{1.82, 0.}, 
+        NCache[{1.84, Rational[71, 200]}, {1.84, 0.355}],
+        RoundingRadius->0], 
+       RectangleBox[{1.84, 0.}, 
+        NCache[{1.86, Rational[47, 100]}, {1.86, 0.47}],
+        RoundingRadius->0], 
+       RectangleBox[{1.86, 0.}, 
+        NCache[{1.88, Rational[83, 200]}, {1.88, 0.415}],
+        RoundingRadius->0], 
+       RectangleBox[{1.88, 0.}, NCache[{1.9, Rational[43, 100]}, {1.9, 0.43}],
+        RoundingRadius->0], 
+       RectangleBox[{1.9, 0.}, NCache[{1.92, Rational[41, 100]}, {1.92, 0.41}],
+        RoundingRadius->0], 
+       RectangleBox[{1.92, 0.}, 
+        NCache[{1.94, Rational[39, 100]}, {1.94, 0.39}],
+        RoundingRadius->0], 
+       RectangleBox[{1.94, 0.}, 
+        NCache[{1.96, Rational[73, 200]}, {1.96, 0.365}],
+        RoundingRadius->0], 
+       RectangleBox[{1.96, 0.}, 
+        NCache[{1.98, Rational[93, 200]}, {1.98, 0.465}],
+        RoundingRadius->0], 
+       RectangleBox[{1.98, 0.}, NCache[{2., Rational[91, 200]}, {2., 0.455}],
+        RoundingRadius->0], 
+       RectangleBox[{2., 0.}, NCache[{2.02, Rational[81, 200]}, {2.02, 0.405}],
+        RoundingRadius->0], 
+       RectangleBox[{2.02, 0.}, 
+        NCache[{2.04, Rational[39, 100]}, {2.04, 0.39}],
+        RoundingRadius->0], 
+       RectangleBox[{2.04, 0.}, NCache[{2.06, Rational[19, 50]}, {2.06, 0.38}],
+        RoundingRadius->0], 
+       RectangleBox[{2.06, 0.}, 
+        NCache[{2.08, Rational[29, 100]}, {2.08, 0.29}],
+        RoundingRadius->0], 
+       RectangleBox[{2.08, 0.}, NCache[{2.1, Rational[3, 10]}, {2.1, 0.3}],
+        RoundingRadius->0], 
+       RectangleBox[{2.1, 0.}, 
+        NCache[{2.12, Rational[73, 200]}, {2.12, 0.365}],
+        RoundingRadius->0], 
+       RectangleBox[{2.12, 0.}, 
+        NCache[{2.14, Rational[59, 200]}, {2.14, 0.295}],
+        RoundingRadius->0], 
+       RectangleBox[{2.14, 0.}, 
+        NCache[{2.16, Rational[61, 200]}, {2.16, 0.305}],
+        RoundingRadius->0], 
+       RectangleBox[{2.16, 0.}, 
+        NCache[{2.18, Rational[59, 200]}, {2.18, 0.295}],
+        RoundingRadius->0], 
+       RectangleBox[{2.18, 0.}, NCache[{2.2, Rational[49, 200]}, {2.2, 0.245}],
+        RoundingRadius->0], 
+       RectangleBox[{2.2, 0.}, NCache[{2.22, Rational[11, 50]}, {2.22, 0.22}],
+        RoundingRadius->0], 
+       RectangleBox[{2.22, 0.}, 
+        NCache[{2.24, Rational[63, 200]}, {2.24, 0.315}],
+        RoundingRadius->0], 
+       RectangleBox[{2.24, 0.}, NCache[{2.26, Rational[8, 25]}, {2.26, 0.32}],
+        RoundingRadius->0], 
+       RectangleBox[{2.26, 0.}, NCache[{2.28, Rational[7, 25]}, {2.28, 0.28}],
+        RoundingRadius->0], 
+       RectangleBox[{2.28, 0.}, NCache[{2.3, Rational[13, 50]}, {2.3, 0.26}],
+        RoundingRadius->0], 
+       RectangleBox[{2.3, 0.}, NCache[{2.32, Rational[31, 100]}, {2.32, 0.31}],
+        RoundingRadius->0], 
+       RectangleBox[{2.32, 0.}, NCache[{2.34, Rational[6, 25]}, {2.34, 0.24}],
+        RoundingRadius->0], 
+       RectangleBox[{2.34, 0.}, NCache[{2.36, Rational[6, 25]}, {2.36, 0.24}],
+        RoundingRadius->0], 
+       RectangleBox[{2.36, 0.}, NCache[{2.38, Rational[1, 5]}, {2.38, 0.2}],
+        RoundingRadius->0], 
+       RectangleBox[{2.38, 0.}, NCache[{2.4, Rational[53, 200]}, {2.4, 0.265}],
+        RoundingRadius->0], 
+       RectangleBox[{2.4, 0.}, NCache[{2.42, Rational[27, 100]}, {2.42, 0.27}],
+        RoundingRadius->0], 
+       RectangleBox[{2.42, 0.}, 
+        NCache[{2.44, Rational[41, 200]}, {2.44, 0.205}],
+        RoundingRadius->0], 
+       RectangleBox[{2.44, 0.}, 
+        NCache[{2.46, Rational[21, 100]}, {2.46, 0.21}],
+        RoundingRadius->0], 
+       RectangleBox[{2.46, 0.}, 
+        NCache[{2.48, Rational[51, 200]}, {2.48, 0.255}],
+        RoundingRadius->0], 
+       RectangleBox[{2.48, 0.}, NCache[{2.5, Rational[11, 50]}, {2.5, 0.22}],
+        RoundingRadius->0], 
+       RectangleBox[{2.5, 0.}, NCache[{2.52, Rational[9, 40]}, {2.52, 0.225}],
+        RoundingRadius->0], 
+       RectangleBox[{2.52, 0.}, 
+        NCache[{2.54, Rational[37, 200]}, {2.54, 0.185}],
+        RoundingRadius->0], 
+       RectangleBox[{2.54, 0.}, 
+        NCache[{2.56, Rational[53, 200]}, {2.56, 0.265}],
+        RoundingRadius->0], 
+       RectangleBox[{2.56, 0.}, 
+        NCache[{2.58, Rational[23, 100]}, {2.58, 0.23}],
+        RoundingRadius->0], 
+       RectangleBox[{2.58, 0.}, NCache[{2.6, Rational[19, 100]}, {2.6, 0.19}],
+        RoundingRadius->0], 
+       RectangleBox[{2.6, 0.}, NCache[{2.62, Rational[19, 100]}, {2.62, 0.19}],
+        RoundingRadius->0], 
+       RectangleBox[{2.62, 0.}, NCache[{2.64, Rational[3, 20]}, {2.64, 0.15}],
+        RoundingRadius->0], 
+       RectangleBox[{2.64, 0.}, 
+        NCache[{2.66, Rational[31, 200]}, {2.66, 0.155}],
+        RoundingRadius->0], 
+       RectangleBox[{2.66, 0.}, 
+        NCache[{2.68, Rational[37, 200]}, {2.68, 0.185}],
+        RoundingRadius->0], 
+       RectangleBox[{2.68, 0.}, NCache[{2.7, Rational[1, 5]}, {2.7, 0.2}],
+        RoundingRadius->0], 
+       RectangleBox[{2.7, 0.}, NCache[{2.72, Rational[3, 20]}, {2.72, 0.15}],
+        RoundingRadius->0], 
+       RectangleBox[{2.72, 0.}, 
+        NCache[{2.74, Rational[17, 100]}, {2.74, 0.17}],
+        RoundingRadius->0], 
+       RectangleBox[{2.74, 0.}, 
+        NCache[{2.76, Rational[29, 200]}, {2.76, 0.145}],
+        RoundingRadius->0], 
+       RectangleBox[{2.76, 0.}, 
+        NCache[{2.78, Rational[19, 100]}, {2.78, 0.19}],
+        RoundingRadius->0], 
+       RectangleBox[{2.78, 0.}, NCache[{2.8, Rational[27, 200]}, {2.8, 0.135}],
+        RoundingRadius->0], 
+       RectangleBox[{2.8, 0.}, NCache[{2.82, Rational[7, 40]}, {2.82, 0.175}],
+        RoundingRadius->0], 
+       RectangleBox[{2.82, 0.}, 
+        NCache[{2.84, Rational[29, 200]}, {2.84, 0.145}],
+        RoundingRadius->0], 
+       RectangleBox[{2.84, 0.}, 
+        NCache[{2.86, Rational[21, 100]}, {2.86, 0.21}],
+        RoundingRadius->0], 
+       RectangleBox[{2.86, 0.}, NCache[{2.88, Rational[3, 20]}, {2.88, 0.15}],
+        RoundingRadius->0], 
+       RectangleBox[{2.88, 0.}, NCache[{2.9, Rational[3, 25]}, {2.9, 0.12}],
+        RoundingRadius->0], 
+       RectangleBox[{2.9, 0.}, NCache[{2.92, Rational[17, 100]}, {2.92, 0.17}],
+        RoundingRadius->0], 
+       RectangleBox[{2.92, 0.}, NCache[{2.94, Rational[9, 50]}, {2.94, 0.18}],
+        RoundingRadius->0], 
+       RectangleBox[{2.94, 0.}, NCache[{2.96, Rational[1, 10]}, {2.96, 0.1}],
+        RoundingRadius->0], 
+       RectangleBox[{2.96, 0.}, NCache[{2.98, Rational[7, 50]}, {2.98, 0.14}],
+        RoundingRadius->0], 
+       RectangleBox[{2.98, 0.}, NCache[{3., Rational[23, 200]}, {3., 0.115}],
+        RoundingRadius->0], 
+       RectangleBox[{3., 0.}, NCache[{3.02, Rational[31, 200]}, {3.02, 0.155}],
+        RoundingRadius->0], 
+       RectangleBox[{3.02, 0.}, NCache[{3.04, Rational[9, 100]}, {3.04, 0.09}],
+        RoundingRadius->0], 
+       RectangleBox[{3.04, 0.}, 
+        NCache[{3.06, Rational[17, 200]}, {3.06, 0.085}],
+        RoundingRadius->0], 
+       RectangleBox[{3.06, 0.}, 
+        NCache[{3.08, Rational[13, 100]}, {3.08, 0.13}],
+        RoundingRadius->0], 
+       RectangleBox[{3.08, 0.}, NCache[{3.1, Rational[11, 100]}, {3.1, 0.11}],
+        RoundingRadius->0], 
+       RectangleBox[{3.1, 0.}, NCache[{3.12, Rational[1, 8]}, {3.12, 0.125}],
+        RoundingRadius->0], 
+       RectangleBox[{3.12, 0.}, NCache[{3.14, Rational[3, 25]}, {3.14, 0.12}],
+        RoundingRadius->0], 
+       RectangleBox[{3.14, 0.}, 
+        NCache[{3.16, Rational[27, 200]}, {3.16, 0.135}],
+        RoundingRadius->0], 
+       RectangleBox[{3.16, 0.}, 
+        NCache[{3.18, Rational[21, 200]}, {3.18, 0.105}],
+        RoundingRadius->0], 
+       RectangleBox[{3.18, 0.}, NCache[{3.2, Rational[1, 10]}, {3.2, 0.1}],
+        RoundingRadius->0], 
+       RectangleBox[{3.2, 0.}, NCache[{3.22, Rational[13, 100]}, {3.22, 0.13}],
+        RoundingRadius->0], 
+       RectangleBox[{3.22, 0.}, NCache[{3.24, Rational[3, 20]}, {3.24, 0.15}],
+        RoundingRadius->0], 
+       RectangleBox[{3.24, 0.}, NCache[{3.26, Rational[9, 100]}, {3.26, 0.09}],
+        RoundingRadius->0], 
+       RectangleBox[{3.26, 0.}, 
+        NCache[{3.28, Rational[29, 200]}, {3.28, 0.145}],
+        RoundingRadius->0], 
+       RectangleBox[{3.28, 0.}, NCache[{3.3, Rational[17, 200]}, {3.3, 0.085}],
+        RoundingRadius->0], 
+       RectangleBox[{3.3, 0.}, NCache[{3.32, Rational[1, 10]}, {3.32, 0.1}],
+        RoundingRadius->0], 
+       RectangleBox[{3.32, 0.}, NCache[{3.34, Rational[1, 10]}, {3.34, 0.1}],
+        RoundingRadius->0], 
+       RectangleBox[{3.34, 0.}, NCache[{3.36, Rational[2, 25]}, {3.36, 0.08}],
+        RoundingRadius->0], 
+       RectangleBox[{3.36, 0.}, NCache[{3.38, Rational[7, 100]}, {3.38, 0.07}],
+        RoundingRadius->0], 
+       RectangleBox[{3.38, 0.}, NCache[{3.4, Rational[9, 100]}, {3.4, 0.09}],
+        RoundingRadius->0], 
+       RectangleBox[{3.4, 0.}, 
+        NCache[{3.42, Rational[21, 200]}, {3.42, 0.105}],
+        RoundingRadius->0], 
+       RectangleBox[{3.42, 0.}, NCache[{3.44, Rational[7, 100]}, {3.44, 0.07}],
+        RoundingRadius->0], 
+       RectangleBox[{3.44, 0.}, NCache[{3.46, Rational[9, 100]}, {3.46, 0.09}],
+        RoundingRadius->0], 
+       RectangleBox[{3.46, 0.}, 
+        NCache[{3.48, Rational[19, 200]}, {3.48, 0.095}],
+        RoundingRadius->0], 
+       RectangleBox[{3.48, 0.}, NCache[{3.5, Rational[17, 200]}, {3.5, 0.085}],
+        RoundingRadius->0], 
+       RectangleBox[{3.5, 0.}, 
+        NCache[{3.52, Rational[13, 200]}, {3.52, 0.065}],
+        RoundingRadius->0], 
+       RectangleBox[{3.52, 0.}, NCache[{3.54, Rational[7, 100]}, {3.54, 0.07}],
+        RoundingRadius->0], 
+       RectangleBox[{3.54, 0.}, 
+        NCache[{3.56, Rational[17, 200]}, {3.56, 0.085}],
+        RoundingRadius->0], 
+       RectangleBox[{3.56, 0.}, NCache[{3.58, Rational[7, 100]}, {3.58, 0.07}],
+        RoundingRadius->0], 
+       RectangleBox[{3.58, 0.}, NCache[{3.6, Rational[17, 200]}, {3.6, 0.085}],
+        RoundingRadius->0], 
+       RectangleBox[{3.6, 0.}, 
+        NCache[{3.62, Rational[13, 200]}, {3.62, 0.065}],
+        RoundingRadius->0], 
+       RectangleBox[{3.62, 0.}, 
+        NCache[{3.64, Rational[11, 200]}, {3.64, 0.055}],
+        RoundingRadius->0], 
+       RectangleBox[{3.64, 0.}, NCache[{3.66, Rational[3, 40]}, {3.66, 0.075}],
+        RoundingRadius->0], 
+       RectangleBox[{3.66, 0.}, 
+        NCache[{3.68, Rational[11, 200]}, {3.68, 0.055}],
+        RoundingRadius->0], 
+       RectangleBox[{3.68, 0.}, NCache[{3.7, Rational[17, 200]}, {3.7, 0.085}],
+        RoundingRadius->0], 
+       RectangleBox[{3.7, 0.}, NCache[{3.72, Rational[3, 50]}, {3.72, 0.06}],
+        RoundingRadius->0], 
+       RectangleBox[{3.72, 0.}, NCache[{3.74, Rational[3, 50]}, {3.74, 0.06}],
+        RoundingRadius->0], 
+       RectangleBox[{3.74, 0.}, 
+        NCache[{3.76, Rational[13, 200]}, {3.76, 0.065}],
+        RoundingRadius->0], 
+       RectangleBox[{3.76, 0.}, NCache[{3.78, Rational[3, 40]}, {3.78, 0.075}],
+        RoundingRadius->0], 
+       RectangleBox[{3.78, 0.}, NCache[{3.8, Rational[2, 25]}, {3.8, 0.08}],
+        RoundingRadius->0], 
+       RectangleBox[{3.8, 0.}, NCache[{3.82, Rational[3, 50]}, {3.82, 0.06}],
+        RoundingRadius->0], 
+       RectangleBox[{3.82, 0.}, 
+        NCache[{3.84, Rational[13, 200]}, {3.84, 0.065}],
+        RoundingRadius->0], 
+       RectangleBox[{3.84, 0.}, NCache[{3.86, Rational[1, 20]}, {3.86, 0.05}],
+        RoundingRadius->0], 
+       RectangleBox[{3.86, 0.}, 
+        NCache[{3.88, Rational[13, 200]}, {3.88, 0.065}],
+        RoundingRadius->0], 
+       RectangleBox[{3.88, 0.}, NCache[{3.9, Rational[7, 200]}, {3.9, 0.035}],
+        RoundingRadius->0], 
+       RectangleBox[{3.9, 0.}, NCache[{3.92, Rational[7, 100]}, {3.92, 0.07}],
+        RoundingRadius->0], 
+       RectangleBox[{3.92, 0.}, NCache[{3.94, Rational[7, 100]}, {3.94, 0.07}],
+        RoundingRadius->0], 
+       RectangleBox[{3.94, 0.}, 
+        NCache[{3.96, Rational[9, 200]}, {3.96, 0.045}],
+        RoundingRadius->0], 
+       RectangleBox[{3.96, 0.}, NCache[{3.98, Rational[1, 25]}, {3.98, 0.04}],
+        RoundingRadius->0], 
+       RectangleBox[{3.98, 0.}, NCache[{4., Rational[9, 200]}, {4., 0.045}],
+        RoundingRadius->0], 
+       RectangleBox[{4., 0.}, NCache[{4.02, Rational[1, 20]}, {4.02, 0.05}],
+        RoundingRadius->0], 
+       RectangleBox[{4.02, 0.}, NCache[{4.04, Rational[1, 20]}, {4.04, 0.05}],
+        RoundingRadius->0], 
+       RectangleBox[{4.04, 0.}, 
+        NCache[{4.06, Rational[7, 200]}, {4.06, 0.035}],
+        RoundingRadius->0], 
+       RectangleBox[{4.06, 0.}, NCache[{4.08, Rational[1, 25]}, {4.08, 0.04}],
+        RoundingRadius->0], 
+       RectangleBox[{4.08, 0.}, NCache[{4.1, Rational[9, 200]}, {4.1, 0.045}],
+        RoundingRadius->0], 
+       RectangleBox[{4.1, 0.}, NCache[{4.12, Rational[9, 200]}, {4.12, 0.045}],
+        RoundingRadius->0], 
+       RectangleBox[{4.12, 0.}, NCache[{4.14, Rational[1, 25]}, {4.14, 0.04}],
+        RoundingRadius->0], 
+       RectangleBox[{4.14, 0.}, 
+        NCache[{4.16, Rational[9, 200]}, {4.16, 0.045}],
+        RoundingRadius->0], 
+       RectangleBox[{4.16, 0.}, NCache[{4.18, Rational[1, 40]}, {4.18, 0.025}],
+        RoundingRadius->0], 
+       RectangleBox[{4.18, 0.}, NCache[{4.2, Rational[11, 200]}, {4.2, 0.055}],
+        RoundingRadius->0], 
+       RectangleBox[{4.2, 0.}, NCache[{4.22, Rational[1, 40]}, {4.22, 0.025}],
+        RoundingRadius->0], 
+       RectangleBox[{4.22, 0.}, NCache[{4.24, Rational[1, 40]}, {4.24, 0.025}],
+        RoundingRadius->0], 
+       RectangleBox[{4.24, 0.}, 
+        NCache[{4.26, Rational[7, 200]}, {4.26, 0.035}],
+        RoundingRadius->0], 
+       RectangleBox[{4.26, 0.}, NCache[{4.28, Rational[3, 100]}, {4.28, 0.03}],
+        RoundingRadius->0], 
+       RectangleBox[{4.28, 0.}, NCache[{4.3, Rational[7, 200]}, {4.3, 0.035}],
+        RoundingRadius->0], 
+       RectangleBox[{4.3, 0.}, 
+        NCache[{4.32, Rational[11, 200]}, {4.32, 0.055}],
+        RoundingRadius->0], 
+       RectangleBox[{4.32, 0.}, NCache[{4.34, Rational[1, 25]}, {4.34, 0.04}],
+        RoundingRadius->0], 
+       RectangleBox[{4.34, 0.}, NCache[{4.36, Rational[3, 100]}, {4.36, 0.03}],
+        RoundingRadius->0], 
+       RectangleBox[{4.36, 0.}, NCache[{4.38, Rational[1, 40]}, {4.38, 0.025}],
+        RoundingRadius->0], 
+       RectangleBox[{4.38, 0.}, NCache[{4.4, Rational[3, 200]}, {4.4, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{4.4, 0.}, NCache[{4.42, Rational[3, 100]}, {4.42, 0.03}],
+        RoundingRadius->0], 
+       RectangleBox[{4.42, 0.}, NCache[{4.44, Rational[1, 40]}, {4.44, 0.025}],
+        RoundingRadius->0], 
+       RectangleBox[{4.44, 0.}, NCache[{4.46, Rational[1, 50]}, {4.46, 0.02}],
+        RoundingRadius->0], 
+       RectangleBox[{4.46, 0.}, NCache[{4.48, Rational[1, 40]}, {4.48, 0.025}],
+        RoundingRadius->0], 
+       RectangleBox[{4.48, 0.}, NCache[{4.5, Rational[3, 100]}, {4.5, 0.03}],
+        RoundingRadius->0], 
+       RectangleBox[{4.5, 0.}, NCache[{4.52, Rational[1, 25]}, {4.52, 0.04}],
+        RoundingRadius->0], 
+       RectangleBox[{4.52, 0.}, NCache[{4.54, Rational[3, 100]}, {4.54, 0.03}],
+        RoundingRadius->0], 
+       RectangleBox[{4.54, 0.}, NCache[{4.56, Rational[1, 50]}, {4.56, 0.02}],
+        RoundingRadius->0], 
+       RectangleBox[{4.56, 0.}, NCache[{4.58, Rational[1, 40]}, {4.58, 0.025}],
+        RoundingRadius->0], 
+       RectangleBox[{4.58, 0.}, NCache[{4.6, Rational[1, 25]}, {4.6, 0.04}],
+        RoundingRadius->0], 
+       RectangleBox[{4.6, 0.}, NCache[{4.62, Rational[3, 100]}, {4.62, 0.03}],
+        RoundingRadius->0], 
+       RectangleBox[{4.62, 0.}, NCache[{4.64, Rational[1, 50]}, {4.64, 0.02}],
+        RoundingRadius->0], 
+       RectangleBox[{4.64, 0.}, 
+        NCache[{4.66, Rational[1, 200]}, {4.66, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{4.66, 0.}, NCache[{4.68, Rational[1, 40]}, {4.68, 0.025}],
+        RoundingRadius->0], 
+       RectangleBox[{4.68, 0.}, NCache[{4.7, Rational[9, 200]}, {4.7, 0.045}],
+        RoundingRadius->0], 
+       RectangleBox[{4.7, 0.}, NCache[{4.72, Rational[3, 100]}, {4.72, 0.03}],
+        RoundingRadius->0], 
+       RectangleBox[{4.72, 0.}, 
+        NCache[{4.74, Rational[1, 200]}, {4.74, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{4.74, 0.}, NCache[{4.76, Rational[1, 100]}, {4.76, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{4.76, 0.}, NCache[{4.78, Rational[1, 20]}, {4.78, 0.05}],
+        RoundingRadius->0], 
+       RectangleBox[{4.78, 0.}, NCache[{4.8, Rational[1, 40]}, {4.8, 0.025}],
+        RoundingRadius->0], 
+       RectangleBox[{4.8, 0.}, NCache[{4.82, Rational[3, 200]}, {4.82, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{4.82, 0.}, 
+        NCache[{4.84, Rational[3, 200]}, {4.84, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{4.84, 0.}, NCache[{4.86, Rational[3, 100]}, {4.86, 0.03}],
+        RoundingRadius->0], 
+       RectangleBox[{4.86, 0.}, NCache[{4.88, Rational[1, 40]}, {4.88, 0.025}],
+        RoundingRadius->0], 
+       RectangleBox[{4.88, 0.}, NCache[{4.9, Rational[1, 100]}, {4.9, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{4.9, 0.}, NCache[{4.92, Rational[1, 200]}, {4.92, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{4.92, 0.}, NCache[{4.94, Rational[1, 50]}, {4.94, 0.02}],
+        RoundingRadius->0], 
+       RectangleBox[{4.94, 0.}, 
+        NCache[{4.96, Rational[3, 200]}, {4.96, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{4.96, 0.}, 
+        NCache[{4.98, Rational[3, 200]}, {4.98, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{4.98, 0.}, NCache[{5., Rational[1, 100]}, {5., 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{5., 0.}, NCache[{5.02, Rational[1, 50]}, {5.02, 0.02}],
+        RoundingRadius->0], 
+       RectangleBox[{5.02, 0.}, 
+        NCache[{5.04, Rational[1, 200]}, {5.04, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{5.04, 0.}, NCache[{5.06, Rational[1, 100]}, {5.06, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{5.06, 0.}, 
+        NCache[{5.08, Rational[1, 200]}, {5.08, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{5.08, 0.}, NCache[{5.1, Rational[3, 200]}, {5.1, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{5.1, 0.}, NCache[{5.12, Rational[1, 200]}, {5.12, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{5.12, 0.}, 
+        NCache[{5.14, Rational[3, 200]}, {5.14, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{5.14, 0.}, 
+        NCache[{5.16, Rational[3, 200]}, {5.16, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{5.16, 0.}, 
+        NCache[{5.18, Rational[3, 200]}, {5.18, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{5.18, 0.}, NCache[{5.2, Rational[1, 50]}, {5.2, 0.02}],
+        RoundingRadius->0], 
+       RectangleBox[{5.2, 0.}, NCache[{5.22, Rational[3, 200]}, {5.22, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{5.22, 0.}, NCache[{5.24, Rational[1, 100]}, {5.24, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{5.24, 0.}, 
+        NCache[{5.26, Rational[3, 200]}, {5.26, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{5.26, 0.}, NCache[{5.28, Rational[1, 100]}, {5.28, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{5.28, 0.}, NCache[{5.3, Rational[3, 200]}, {5.3, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{5.3, 0.}, NCache[{5.32, Rational[1, 50]}, {5.32, 0.02}],
+        RoundingRadius->0], 
+       RectangleBox[{5.32, 0.}, 
+        NCache[{5.34, Rational[3, 200]}, {5.34, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{5.34, 0.}, NCache[{5.36, Rational[1, 50]}, {5.36, 0.02}],
+        RoundingRadius->0], 
+       RectangleBox[{5.36, 0.}, NCache[{5.38, Rational[1, 50]}, {5.38, 0.02}],
+        RoundingRadius->0], 
+       RectangleBox[{5.38, 0.}, NCache[{5.4, Rational[1, 100]}, {5.4, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{5.4, 0.}, NCache[{5.42, Rational[1, 50]}, {5.42, 0.02}],
+        RoundingRadius->0], 
+       RectangleBox[{5.42, 0.}, NCache[{5.44, Rational[1, 40]}, {5.44, 0.025}],
+        RoundingRadius->0], 
+       RectangleBox[{5.44, 0.}, NCache[{5.46, Rational[1, 100]}, {5.46, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{5.46, 0.}, 
+        NCache[{5.48, Rational[3, 200]}, {5.48, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{5.48, 0.}, NCache[{5.5, Rational[1, 100]}, {5.5, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{5.5, 0.}, NCache[{5.52, Rational[3, 200]}, {5.52, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{5.52, 0.}, 
+        NCache[{5.54, Rational[3, 200]}, {5.54, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{5.54, 0.}, NCache[{5.56, Rational[1, 100]}, {5.56, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{5.56, 0.}, NCache[{5.58, Rational[1, 100]}, {5.58, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{5.58, 0.}, NCache[{5.6, Rational[1, 100]}, {5.6, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{5.6, 0.}, NCache[{5.62, Rational[1, 100]}, {5.62, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{5.62, 0.}, NCache[{5.64, Rational[1, 100]}, {5.64, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{5.64, 0.}, 
+        NCache[{5.66, Rational[1, 200]}, {5.66, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{5.66, 0.}, NCache[{5.68, Rational[1, 50]}, {5.68, 0.02}],
+        RoundingRadius->0], 
+       RectangleBox[{5.68, 0.}, NCache[{5.7, Rational[1, 200]}, {5.7, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{5.7, 0.}, NCache[{5.72, Rational[1, 200]}, {5.72, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{5.72, 0.}, 
+        NCache[{5.74, Rational[3, 200]}, {5.74, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{5.74, 0.}, 
+        NCache[{5.76, Rational[1, 200]}, {5.76, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{5.76, 0.}, NCache[{5.78, Rational[1, 100]}, {5.78, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{5.82, 0.}, 
+        NCache[{5.84, Rational[1, 200]}, {5.84, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{5.84, 0.}, NCache[{5.86, Rational[1, 100]}, {5.86, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{5.86, 0.}, NCache[{5.88, Rational[1, 100]}, {5.88, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{5.88, 0.}, NCache[{5.9, Rational[3, 200]}, {5.9, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{5.9, 0.}, NCache[{5.92, Rational[1, 200]}, {5.92, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{5.92, 0.}, NCache[{5.94, Rational[1, 100]}, {5.94, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{5.94, 0.}, 
+        NCache[{5.96, Rational[3, 200]}, {5.96, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{5.96, 0.}, 
+        NCache[{5.98, Rational[3, 200]}, {5.98, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{5.98, 0.}, NCache[{6., Rational[3, 200]}, {6., 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{6., 0.}, NCache[{6.02, Rational[1, 50]}, {6.02, 0.02}],
+        RoundingRadius->0], 
+       RectangleBox[{6.02, 0.}, NCache[{6.04, Rational[1, 100]}, {6.04, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{6.04, 0.}, 
+        NCache[{6.06, Rational[1, 200]}, {6.06, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{6.06, 0.}, NCache[{6.08, Rational[1, 100]}, {6.08, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{6.1, 0.}, NCache[{6.12, Rational[3, 200]}, {6.12, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{6.12, 0.}, NCache[{6.14, Rational[1, 100]}, {6.14, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{6.14, 0.}, NCache[{6.16, Rational[1, 50]}, {6.16, 0.02}],
+        RoundingRadius->0], 
+       RectangleBox[{6.18, 0.}, NCache[{6.2, Rational[1, 200]}, {6.2, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{6.22, 0.}, 
+        NCache[{6.24, Rational[1, 200]}, {6.24, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{6.24, 0.}, 
+        NCache[{6.26, Rational[1, 200]}, {6.26, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{6.26, 0.}, 
+        NCache[{6.28, Rational[1, 200]}, {6.28, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{6.3, 0.}, NCache[{6.32, Rational[1, 200]}, {6.32, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{6.34, 0.}, 
+        NCache[{6.36, Rational[3, 200]}, {6.36, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{6.38, 0.}, NCache[{6.4, Rational[1, 100]}, {6.4, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{6.42, 0.}, NCache[{6.44, Rational[1, 100]}, {6.44, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{6.44, 0.}, 
+        NCache[{6.46, Rational[1, 200]}, {6.46, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{6.46, 0.}, 
+        NCache[{6.48, Rational[1, 200]}, {6.48, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{6.48, 0.}, NCache[{6.5, Rational[1, 200]}, {6.5, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{6.52, 0.}, 
+        NCache[{6.54, Rational[1, 200]}, {6.54, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{6.54, 0.}, 
+        NCache[{6.56, Rational[1, 200]}, {6.56, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{6.58, 0.}, NCache[{6.6, Rational[1, 200]}, {6.6, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{6.62, 0.}, NCache[{6.64, Rational[1, 100]}, {6.64, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{6.68, 0.}, NCache[{6.7, Rational[1, 200]}, {6.7, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{6.74, 0.}, 
+        NCache[{6.76, Rational[1, 200]}, {6.76, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{6.76, 0.}, 
+        NCache[{6.78, Rational[1, 200]}, {6.78, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{6.82, 0.}, 
+        NCache[{6.84, Rational[1, 200]}, {6.84, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{6.84, 0.}, 
+        NCache[{6.86, Rational[1, 200]}, {6.86, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{6.9, 0.}, NCache[{6.92, Rational[1, 200]}, {6.92, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{6.92, 0.}, NCache[{6.94, Rational[1, 100]}, {6.94, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{6.94, 0.}, 
+        NCache[{6.96, Rational[1, 200]}, {6.96, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{6.96, 0.}, 
+        NCache[{6.98, Rational[1, 200]}, {6.98, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{6.98, 0.}, NCache[{7., Rational[1, 200]}, {7., 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{7.08, 0.}, NCache[{7.1, Rational[1, 200]}, {7.1, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{7.12, 0.}, 
+        NCache[{7.14, Rational[1, 200]}, {7.14, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{7.14, 0.}, 
+        NCache[{7.16, Rational[1, 200]}, {7.16, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{7.18, 0.}, NCache[{7.2, Rational[1, 200]}, {7.2, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{7.26, 0.}, 
+        NCache[{7.28, Rational[1, 200]}, {7.28, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{7.32, 0.}, 
+        NCache[{7.34, Rational[1, 200]}, {7.34, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{7.34, 0.}, 
+        NCache[{7.36, Rational[1, 200]}, {7.36, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{7.42, 0.}, 
+        NCache[{7.44, Rational[1, 200]}, {7.44, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{7.46, 0.}, 
+        NCache[{7.48, Rational[1, 200]}, {7.48, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{7.5, 0.}, NCache[{7.52, Rational[1, 200]}, {7.52, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{7.68, 0.}, NCache[{7.7, Rational[1, 200]}, {7.7, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{7.72, 0.}, 
+        NCache[{7.74, Rational[1, 200]}, {7.74, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{7.74, 0.}, 
+        NCache[{7.76, Rational[1, 200]}, {7.76, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{7.76, 0.}, 
+        NCache[{7.78, Rational[1, 200]}, {7.78, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{7.82, 0.}, 
+        NCache[{7.84, Rational[1, 200]}, {7.84, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{7.94, 0.}, 
+        NCache[{7.96, Rational[1, 200]}, {7.96, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{8.08, 0.}, NCache[{8.1, Rational[1, 200]}, {8.1, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{8.36, 0.}, 
+        NCache[{8.38, Rational[1, 200]}, {8.38, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{8.42, 0.}, 
+        NCache[{8.44, Rational[1, 200]}, {8.44, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{8.48, 0.}, NCache[{8.5, Rational[1, 200]}, {8.5, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{8.52, 0.}, 
+        NCache[{8.54, Rational[1, 200]}, {8.54, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{8.9, 0.}, NCache[{8.92, Rational[1, 200]}, {8.92, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{9.4, 0.}, NCache[{9.42, Rational[1, 200]}, {9.42, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{12.72, 0.}, 
+        NCache[{12.74, Rational[1, 200]}, {12.74, 0.005}],
+        RoundingRadius->
+         0]}, {}, {}}}, {{{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}}, {}}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{1., 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  ImageSize->Large,
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "ScalingFunctions" -> None, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{1, 6}, {0., 0.999999897959189}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.8801239934646482`*^9, 3.8801240210035987`*^9}, 
+   3.8801240788771853`*^9, 3.880124132741412*^9, 3.8801242159283895`*^9, 
+   3.880124318354719*^9, 3.8801243887063637`*^9, 3.880124645874891*^9, {
+   3.880124690514261*^9, 3.880124713137248*^9}, 3.880125173714073*^9, 
+   3.8801252765901194`*^9, {3.8801255176138177`*^9, 3.8801255420732665`*^9}, 
+   3.880125618880029*^9, 3.880125733286393*^9, 3.8801260169924774`*^9, 
+   3.880126564989177*^9, {3.8801275952015877`*^9, 3.8801276245271487`*^9}, {
+   3.880693552360217*^9, 3.880693574750646*^9}, 3.9011925570765886`*^9, 
+   3.90119476790056*^9, 3.9011974977867656`*^9, 3.9012540153656588`*^9, 
+   3.9012550518218184`*^9, 3.901255173033018*^9, 3.901255266937496*^9, 
+   3.9012553124734373`*^9, 3.901255357755226*^9, 3.9012553926894245`*^9, 
+   3.9012556902308273`*^9, {3.901255749003107*^9, 3.9012557782150483`*^9}, 
+   3.90125595778205*^9, 3.901256143908674*^9, {3.901256345418519*^9, 
+   3.901256371019865*^9}, 3.9012568687158937`*^9, 3.9012569021325307`*^9, 
+   3.9012570046725435`*^9, {3.901257073596038*^9, 3.901257098832561*^9}, 
+   3.9016014089067993`*^9, 3.9016029768466005`*^9, 3.9016030188003283`*^9, 
+   3.9016031291546745`*^9, 3.901604704523356*^9, 3.901604885765394*^9, {
+   3.901689699348069*^9, 3.901689722568878*^9}, 3.9016900564235168`*^9, {
+   3.901690092432656*^9, 3.9016900976458693`*^9}, 3.901690453532972*^9, 
+   3.901690484313555*^9, {3.9016905483360834`*^9, 3.9016906489375477`*^9}},
+ CellLabel->
+  "Out[1120]=",ExpressionUUID->"ce497b0c-03be-438b-bf92-db4d14f8d10f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f3", " ", "=", " ", 
+    RowBox[{"x", "*", 
+     RowBox[{
+      RowBox[{"Exp", "[", 
+       RowBox[{"-", 
+        RowBox[{"x", "^", "2"}]}], "]"}], "/", 
+      RowBox[{"(", 
+       FractionBox["1", "2"], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Integrate", "[", 
+    RowBox[{"f3", ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "Infinity"}], "}"}]}], "]"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{"f3", ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "4"}], "}"}]}], "]"}], ",", 
+   RowBox[{"Histogram", "[", 
+    RowBox[{"M3", ",", " ", "100", ",", " ", "\"\<PDF\>\""}], "]"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.8801240449036274`*^9, 3.88012407288713*^9}, 
+   3.880126515525504*^9, {3.8806935885334344`*^9, 3.8806936227203074`*^9}, 
+   3.9012541506778493`*^9, {3.901254229832882*^9, 3.9012542900678177`*^9}, {
+   3.901254332770303*^9, 3.901254335999688*^9}, {3.901254988026971*^9, 
+   3.901254996319301*^9}, {3.9012553886319394`*^9, 3.9012553887575808`*^9}, {
+   3.901255669398487*^9, 3.901255683246524*^9}, {3.901255742054305*^9, 
+   3.9012557430759363`*^9}, {3.901255816578168*^9, 3.901255827699668*^9}, {
+   3.901255881282519*^9, 3.901255885206809*^9}, 3.9012559444506097`*^9, {
+   3.9012563907841616`*^9, 3.901256396103963*^9}, {3.901256891659382*^9, 
+   3.901256893991665*^9}, {3.90160489305768*^9, 3.9016048934224668`*^9}, {
+   3.9016896900663233`*^9, 3.901689694854811*^9}, {3.9016902336847*^9, 
+   3.901690237546321*^9}, {3.9016902706209664`*^9, 3.901690277310008*^9}, {
+   3.901690450061314*^9, 3.901690468947137*^9}},
+ CellLabel->
+  "In[1089]:=",ExpressionUUID->"2daf0e61-4c2e-41a2-a2b2-12d131f7db75"],
+
+Cell[BoxData[
+ GraphicsBox[{{{{}, {}, 
+     TagBox[
+      {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[1.6], 
+       Opacity[1.], LineBox[CompressedData["
+1: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
+kfpw5ezeXOx/ocN+KA==
+        "]]},
+      Annotation[#, "Charting`Private`Tag$325799#1"]& ]}, {}}, {
+    {RGBColor[0.987148, 0.8073604000000001, 0.49470040000000004`], EdgeForm[
+     Opacity[0.]], {{}, 
+      {RGBColor[0.97858, 0.678934, 0.157834], Opacity[0.5], EdgeForm[Opacity[
+       0.]], RectangleBox[{0., 0.}, 
+        NCache[{0.02, Rational[3, 100]}, {0.02, 0.03}],
+        RoundingRadius->0], 
+       RectangleBox[{0.02, 0.}, 
+        NCache[{0.04, Rational[19, 200]}, {0.04, 0.095}],
+        RoundingRadius->0], 
+       RectangleBox[{0.04, 0.}, NCache[{0.06, Rational[1, 8]}, {0.06, 0.125}],
+        RoundingRadius->0], 
+       RectangleBox[{0.06, 0.}, 
+        NCache[{0.08, Rational[13, 100]}, {0.08, 0.13}],
+        RoundingRadius->0], 
+       RectangleBox[{0.08, 0.}, NCache[{0.1, Rational[37, 200]}, {0.1, 0.185}],
+        RoundingRadius->0], 
+       RectangleBox[{0.1, 0.}, NCache[{0.12, Rational[19, 100]}, {0.12, 0.19}],
+        RoundingRadius->0], 
+       RectangleBox[{0.12, 0.}, 
+        NCache[{0.14, Rational[11, 40]}, {0.14, 0.275}],
+        RoundingRadius->0], 
+       RectangleBox[{0.14, 0.}, NCache[{0.16, Rational[1, 4]}, {0.16, 0.25}],
+        RoundingRadius->0], 
+       RectangleBox[{0.16, 0.}, 
+        NCache[{0.18, Rational[33, 100]}, {0.18, 0.33}],
+        RoundingRadius->0], 
+       RectangleBox[{0.18, 0.}, NCache[{0.2, Rational[63, 200]}, {0.2, 0.315}],
+        RoundingRadius->0], 
+       RectangleBox[{0.2, 0.}, 
+        NCache[{0.22, Rational[83, 200]}, {0.22, 0.415}],
+        RoundingRadius->0], 
+       RectangleBox[{0.22, 0.}, 
+        NCache[{0.24, Rational[91, 200]}, {0.24, 0.455}],
+        RoundingRadius->0], 
+       RectangleBox[{0.24, 0.}, 
+        NCache[{0.26, Rational[53, 100]}, {0.26, 0.53}],
+        RoundingRadius->0], 
+       RectangleBox[{0.26, 0.}, NCache[{0.28, Rational[29, 50]}, {0.28, 0.58}],
+        RoundingRadius->0], 
+       RectangleBox[{0.28, 0.}, 
+        NCache[{0.3, Rational[109, 200]}, {0.3, 0.545}],
+        RoundingRadius->0], 
+       RectangleBox[{0.3, 0.}, 
+        NCache[{0.32, Rational[119, 200]}, {0.32, 0.595}],
+        RoundingRadius->0], 
+       RectangleBox[{0.32, 0.}, NCache[{0.34, Rational[29, 50]}, {0.34, 0.58}],
+        RoundingRadius->0], 
+       RectangleBox[{0.34, 0.}, 
+        NCache[{0.36, Rational[27, 40]}, {0.36, 0.675}],
+        RoundingRadius->0], 
+       RectangleBox[{0.36, 0.}, 
+        NCache[{0.38, Rational[67, 100]}, {0.38, 0.67}],
+        RoundingRadius->0], 
+       RectangleBox[{0.38, 0.}, 
+        NCache[{0.4, Rational[163, 200]}, {0.4, 0.815}],
+        RoundingRadius->0], 
+       RectangleBox[{0.4, 0.}, 
+        NCache[{0.42, Rational[161, 200]}, {0.42, 0.805}],
+        RoundingRadius->0], 
+       RectangleBox[{0.42, 0.}, 
+        NCache[{0.44, Rational[71, 100]}, {0.44, 0.71}],
+        RoundingRadius->0], 
+       RectangleBox[{0.44, 0.}, NCache[{0.46, Rational[33, 50]}, {0.46, 0.66}],
+        RoundingRadius->0], 
+       RectangleBox[{0.46, 0.}, NCache[{0.48, Rational[7, 10]}, {0.48, 0.7}],
+        RoundingRadius->0], 
+       RectangleBox[{0.48, 0.}, 
+        NCache[{0.5, Rational[141, 200]}, {0.5, 0.705}],
+        RoundingRadius->0], 
+       RectangleBox[{0.5, 0.}, NCache[{0.52, Rational[77, 100]}, {0.52, 0.77}],
+        RoundingRadius->0], 
+       RectangleBox[{0.52, 0.}, NCache[{0.54, Rational[33, 50]}, {0.54, 0.66}],
+        RoundingRadius->0], 
+       RectangleBox[{0.54, 0.}, 
+        NCache[{0.56, Rational[89, 100]}, {0.56, 0.89}],
+        RoundingRadius->0], 
+       RectangleBox[{0.56, 0.}, 
+        NCache[{0.58, Rational[159, 200]}, {0.58, 0.795}],
+        RoundingRadius->0], 
+       RectangleBox[{0.58, 0.}, NCache[{0.6, Rational[33, 40]}, {0.6, 0.825}],
+        RoundingRadius->0], 
+       RectangleBox[{0.6, 0.}, NCache[{0.62, Rational[21, 25]}, {0.62, 0.84}],
+        RoundingRadius->0], 
+       RectangleBox[{0.62, 0.}, 
+        NCache[{0.64, Rational[157, 200]}, {0.64, 0.785}],
+        RoundingRadius->0], 
+       RectangleBox[{0.64, 0.}, 
+        NCache[{0.66, Rational[189, 200]}, {0.66, 0.945}],
+        RoundingRadius->0], 
+       RectangleBox[{0.66, 0.}, 
+        NCache[{0.68, Rational[81, 100]}, {0.68, 0.81}],
+        RoundingRadius->0], 
+       RectangleBox[{0.68, 0.}, 
+        NCache[{0.7, Rational[169, 200]}, {0.7, 0.845}],
+        RoundingRadius->0], 
+       RectangleBox[{0.7, 0.}, NCache[{0.72, Rational[19, 25]}, {0.72, 0.76}],
+        RoundingRadius->0], 
+       RectangleBox[{0.72, 0.}, NCache[{0.74, Rational[41, 50]}, {0.74, 0.82}],
+        RoundingRadius->0], 
+       RectangleBox[{0.74, 0.}, 
+        NCache[{0.76, Rational[79, 100]}, {0.76, 0.79}],
+        RoundingRadius->0], 
+       RectangleBox[{0.76, 0.}, 
+        NCache[{0.78, Rational[163, 200]}, {0.78, 0.815}],
+        RoundingRadius->0], 
+       RectangleBox[{0.78, 0.}, 
+        NCache[{0.8, Rational[169, 200]}, {0.8, 0.845}],
+        RoundingRadius->0], 
+       RectangleBox[{0.8, 0.}, NCache[{0.82, Rational[47, 50]}, {0.82, 0.94}],
+        RoundingRadius->0], 
+       RectangleBox[{0.82, 0.}, NCache[{0.84, Rational[18, 25]}, {0.84, 0.72}],
+        RoundingRadius->0], 
+       RectangleBox[{0.84, 0.}, 
+        NCache[{0.86, Rational[31, 40]}, {0.86, 0.775}],
+        RoundingRadius->0], 
+       RectangleBox[{0.86, 0.}, 
+        NCache[{0.88, Rational[169, 200]}, {0.88, 0.845}],
+        RoundingRadius->0], 
+       RectangleBox[{0.88, 0.}, NCache[{0.9, Rational[79, 100]}, {0.9, 0.79}],
+        RoundingRadius->0], 
+       RectangleBox[{0.9, 0.}, 
+        NCache[{0.92, Rational[147, 200]}, {0.92, 0.735}],
+        RoundingRadius->0], 
+       RectangleBox[{0.92, 0.}, 
+        NCache[{0.94, Rational[33, 40]}, {0.94, 0.825}],
+        RoundingRadius->0], 
+       RectangleBox[{0.94, 0.}, 
+        NCache[{0.96, Rational[159, 200]}, {0.96, 0.795}],
+        RoundingRadius->0], 
+       RectangleBox[{0.96, 0.}, NCache[{0.98, Rational[19, 25]}, {0.98, 0.76}],
+        RoundingRadius->0], 
+       RectangleBox[{0.98, 0.}, NCache[{1., Rational[153, 200]}, {1., 0.765}],
+        RoundingRadius->0], 
+       RectangleBox[{1., 0.}, NCache[{1.02, Rational[73, 100]}, {1.02, 0.73}],
+        RoundingRadius->0], 
+       RectangleBox[{1.02, 0.}, 
+        NCache[{1.04, Rational[61, 100]}, {1.04, 0.61}],
+        RoundingRadius->0], 
+       RectangleBox[{1.04, 0.}, NCache[{1.06, Rational[7, 10]}, {1.06, 0.7}],
+        RoundingRadius->0], 
+       RectangleBox[{1.06, 0.}, 
+        NCache[{1.08, Rational[129, 200]}, {1.08, 0.645}],
+        RoundingRadius->0], 
+       RectangleBox[{1.08, 0.}, 
+        NCache[{1.1, Rational[129, 200]}, {1.1, 0.645}],
+        RoundingRadius->0], 
+       RectangleBox[{1.1, 0.}, NCache[{1.12, Rational[3, 5]}, {1.12, 0.6}],
+        RoundingRadius->0], 
+       RectangleBox[{1.12, 0.}, NCache[{1.14, Rational[16, 25]}, {1.14, 0.64}],
+        RoundingRadius->0], 
+       RectangleBox[{1.14, 0.}, 
+        NCache[{1.16, Rational[27, 40]}, {1.16, 0.675}],
+        RoundingRadius->0], 
+       RectangleBox[{1.16, 0.}, NCache[{1.18, Rational[29, 50]}, {1.18, 0.58}],
+        RoundingRadius->0], 
+       RectangleBox[{1.18, 0.}, NCache[{1.2, Rational[27, 50]}, {1.2, 0.54}],
+        RoundingRadius->0], 
+       RectangleBox[{1.2, 0.}, 
+        NCache[{1.22, Rational[103, 200]}, {1.22, 0.515}],
+        RoundingRadius->0], 
+       RectangleBox[{1.22, 0.}, NCache[{1.24, Rational[31, 50]}, {1.24, 0.62}],
+        RoundingRadius->0], 
+       RectangleBox[{1.24, 0.}, NCache[{1.26, Rational[9, 20]}, {1.26, 0.45}],
+        RoundingRadius->0], 
+       RectangleBox[{1.26, 0.}, 
+        NCache[{1.28, Rational[101, 200]}, {1.28, 0.505}],
+        RoundingRadius->0], 
+       RectangleBox[{1.28, 0.}, NCache[{1.3, Rational[57, 100]}, {1.3, 0.57}],
+        RoundingRadius->0], 
+       RectangleBox[{1.3, 0.}, NCache[{1.32, Rational[23, 50]}, {1.32, 0.46}],
+        RoundingRadius->0], 
+       RectangleBox[{1.32, 0.}, NCache[{1.34, Rational[9, 20]}, {1.34, 0.45}],
+        RoundingRadius->0], 
+       RectangleBox[{1.34, 0.}, 
+        NCache[{1.36, Rational[37, 100]}, {1.36, 0.37}],
+        RoundingRadius->0], 
+       RectangleBox[{1.36, 0.}, NCache[{1.38, Rational[21, 50]}, {1.38, 0.42}],
+        RoundingRadius->0], 
+       RectangleBox[{1.38, 0.}, NCache[{1.4, Rational[93, 200]}, {1.4, 0.465}],
+        RoundingRadius->0], 
+       RectangleBox[{1.4, 0.}, NCache[{1.42, Rational[47, 100]}, {1.42, 0.47}],
+        RoundingRadius->0], 
+       RectangleBox[{1.42, 0.}, 
+        NCache[{1.44, Rational[73, 200]}, {1.44, 0.365}],
+        RoundingRadius->0], 
+       RectangleBox[{1.44, 0.}, NCache[{1.46, Rational[17, 50]}, {1.46, 0.34}],
+        RoundingRadius->0], 
+       RectangleBox[{1.46, 0.}, 
+        NCache[{1.48, Rational[83, 200]}, {1.48, 0.415}],
+        RoundingRadius->0], 
+       RectangleBox[{1.48, 0.}, NCache[{1.5, Rational[23, 100]}, {1.5, 0.23}],
+        RoundingRadius->0], 
+       RectangleBox[{1.5, 0.}, 
+        NCache[{1.52, Rational[63, 200]}, {1.52, 0.315}],
+        RoundingRadius->0], 
+       RectangleBox[{1.52, 0.}, 
+        NCache[{1.54, Rational[61, 200]}, {1.54, 0.305}],
+        RoundingRadius->0], 
+       RectangleBox[{1.54, 0.}, NCache[{1.56, Rational[7, 20]}, {1.56, 0.35}],
+        RoundingRadius->0], 
+       RectangleBox[{1.56, 0.}, 
+        NCache[{1.58, Rational[29, 100]}, {1.58, 0.29}],
+        RoundingRadius->0], 
+       RectangleBox[{1.58, 0.}, NCache[{1.6, Rational[51, 200]}, {1.6, 0.255}],
+        RoundingRadius->0], 
+       RectangleBox[{1.6, 0.}, NCache[{1.62, Rational[11, 40]}, {1.62, 0.275}],
+        RoundingRadius->0], 
+       RectangleBox[{1.62, 0.}, 
+        NCache[{1.64, Rational[29, 100]}, {1.64, 0.29}],
+        RoundingRadius->0], 
+       RectangleBox[{1.64, 0.}, 
+        NCache[{1.66, Rational[37, 200]}, {1.66, 0.185}],
+        RoundingRadius->0], 
+       RectangleBox[{1.66, 0.}, 
+        NCache[{1.68, Rational[19, 100]}, {1.68, 0.19}],
+        RoundingRadius->0], 
+       RectangleBox[{1.68, 0.}, NCache[{1.7, Rational[7, 25]}, {1.7, 0.28}],
+        RoundingRadius->0], 
+       RectangleBox[{1.7, 0.}, 
+        NCache[{1.72, Rational[33, 200]}, {1.72, 0.165}],
+        RoundingRadius->0], 
+       RectangleBox[{1.72, 0.}, 
+        NCache[{1.74, Rational[17, 100]}, {1.74, 0.17}],
+        RoundingRadius->0], 
+       RectangleBox[{1.74, 0.}, NCache[{1.76, Rational[4, 25]}, {1.76, 0.16}],
+        RoundingRadius->0], 
+       RectangleBox[{1.76, 0.}, NCache[{1.78, Rational[7, 50]}, {1.78, 0.14}],
+        RoundingRadius->0], 
+       RectangleBox[{1.78, 0.}, NCache[{1.8, Rational[3, 20]}, {1.8, 0.15}],
+        RoundingRadius->0], 
+       RectangleBox[{1.8, 0.}, NCache[{1.82, Rational[1, 8]}, {1.82, 0.125}],
+        RoundingRadius->0], 
+       RectangleBox[{1.82, 0.}, 
+        NCache[{1.84, Rational[23, 200]}, {1.84, 0.115}],
+        RoundingRadius->0], 
+       RectangleBox[{1.84, 0.}, NCache[{1.86, Rational[3, 25]}, {1.86, 0.12}],
+        RoundingRadius->0], 
+       RectangleBox[{1.86, 0.}, 
+        NCache[{1.88, Rational[31, 200]}, {1.88, 0.155}],
+        RoundingRadius->0], 
+       RectangleBox[{1.88, 0.}, NCache[{1.9, Rational[3, 25]}, {1.9, 0.12}],
+        RoundingRadius->0], 
+       RectangleBox[{1.9, 0.}, NCache[{1.92, Rational[9, 100]}, {1.92, 0.09}],
+        RoundingRadius->0], 
+       RectangleBox[{1.92, 0.}, 
+        NCache[{1.94, Rational[21, 200]}, {1.94, 0.105}],
+        RoundingRadius->0], 
+       RectangleBox[{1.94, 0.}, NCache[{1.96, Rational[3, 50]}, {1.96, 0.06}],
+        RoundingRadius->0], 
+       RectangleBox[{1.96, 0.}, NCache[{1.98, Rational[1, 10]}, {1.98, 0.1}],
+        RoundingRadius->0], 
+       RectangleBox[{1.98, 0.}, NCache[{2., Rational[2, 25]}, {2., 0.08}],
+        RoundingRadius->0], 
+       RectangleBox[{2., 0.}, NCache[{2.02, Rational[1, 20]}, {2.02, 0.05}],
+        RoundingRadius->0], 
+       RectangleBox[{2.02, 0.}, NCache[{2.04, Rational[1, 25]}, {2.04, 0.04}],
+        RoundingRadius->0], 
+       RectangleBox[{2.04, 0.}, 
+        NCache[{2.06, Rational[11, 200]}, {2.06, 0.055}],
+        RoundingRadius->0], 
+       RectangleBox[{2.06, 0.}, NCache[{2.08, Rational[1, 40]}, {2.08, 0.025}],
+        RoundingRadius->0], 
+       RectangleBox[{2.08, 0.}, NCache[{2.1, Rational[13, 200]}, {2.1, 0.065}],
+        RoundingRadius->0], 
+       RectangleBox[{2.1, 0.}, NCache[{2.12, Rational[3, 50]}, {2.12, 0.06}],
+        RoundingRadius->0], 
+       RectangleBox[{2.12, 0.}, 
+        NCache[{2.14, Rational[17, 200]}, {2.14, 0.085}],
+        RoundingRadius->0], 
+       RectangleBox[{2.14, 0.}, NCache[{2.16, Rational[1, 40]}, {2.16, 0.025}],
+        RoundingRadius->0], 
+       RectangleBox[{2.16, 0.}, NCache[{2.18, Rational[1, 25]}, {2.18, 0.04}],
+        RoundingRadius->0], 
+       RectangleBox[{2.18, 0.}, NCache[{2.2, Rational[7, 200]}, {2.2, 0.035}],
+        RoundingRadius->0], 
+       RectangleBox[{2.2, 0.}, NCache[{2.22, Rational[1, 25]}, {2.22, 0.04}],
+        RoundingRadius->0], 
+       RectangleBox[{2.22, 0.}, NCache[{2.24, Rational[3, 100]}, {2.24, 0.03}],
+        RoundingRadius->0], 
+       RectangleBox[{2.24, 0.}, NCache[{2.26, Rational[1, 50]}, {2.26, 0.02}],
+        RoundingRadius->0], 
+       RectangleBox[{2.26, 0.}, NCache[{2.28, Rational[1, 40]}, {2.28, 0.025}],
+        RoundingRadius->0], 
+       RectangleBox[{2.28, 0.}, NCache[{2.3, Rational[1, 25]}, {2.3, 0.04}],
+        RoundingRadius->0], 
+       RectangleBox[{2.3, 0.}, NCache[{2.32, Rational[1, 50]}, {2.32, 0.02}],
+        RoundingRadius->0], 
+       RectangleBox[{2.32, 0.}, 
+        NCache[{2.34, Rational[3, 200]}, {2.34, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{2.34, 0.}, NCache[{2.36, Rational[1, 40]}, {2.36, 0.025}],
+        RoundingRadius->0], 
+       RectangleBox[{2.36, 0.}, NCache[{2.38, Rational[1, 100]}, {2.38, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{2.38, 0.}, NCache[{2.4, Rational[3, 100]}, {2.4, 0.03}],
+        RoundingRadius->0], 
+       RectangleBox[{2.4, 0.}, NCache[{2.42, Rational[1, 100]}, {2.42, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{2.42, 0.}, NCache[{2.44, Rational[1, 50]}, {2.44, 0.02}],
+        RoundingRadius->0], 
+       RectangleBox[{2.44, 0.}, 
+        NCache[{2.46, Rational[3, 200]}, {2.46, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{2.46, 0.}, 
+        NCache[{2.48, Rational[1, 200]}, {2.48, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{2.48, 0.}, NCache[{2.5, Rational[3, 200]}, {2.5, 0.015}],
+        RoundingRadius->0], 
+       RectangleBox[{2.5, 0.}, NCache[{2.52, Rational[1, 100]}, {2.52, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{2.52, 0.}, NCache[{2.54, Rational[1, 100]}, {2.54, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{2.54, 0.}, 
+        NCache[{2.56, Rational[1, 200]}, {2.56, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{2.56, 0.}, 
+        NCache[{2.58, Rational[1, 200]}, {2.58, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{2.58, 0.}, NCache[{2.6, Rational[1, 200]}, {2.6, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{2.6, 0.}, NCache[{2.62, Rational[1, 200]}, {2.62, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{2.62, 0.}, 
+        NCache[{2.64, Rational[1, 200]}, {2.64, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{2.68, 0.}, NCache[{2.7, Rational[1, 200]}, {2.7, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{2.72, 0.}, NCache[{2.74, Rational[1, 100]}, {2.74, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{2.82, 0.}, 
+        NCache[{2.84, Rational[1, 200]}, {2.84, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{2.84, 0.}, 
+        NCache[{2.86, Rational[1, 200]}, {2.86, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{3.06, 0.}, NCache[{3.08, Rational[1, 100]}, {3.08, 0.01}],
+        RoundingRadius->0], 
+       RectangleBox[{3.2, 0.}, NCache[{3.22, Rational[1, 200]}, {3.22, 0.005}],
+        RoundingRadius->0], 
+       RectangleBox[{3.44, 0.}, 
+        NCache[{3.46, Rational[1, 200]}, {3.46, 0.005}],
+        RoundingRadius->
+         0]}, {}, {}}}, {{{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}}, {}}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  ImageSize->Large,
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "ScalingFunctions" -> None, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0, 4}, {0., 0.8577633341975924}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{
+  3.8801240739480457`*^9, 3.880124133030944*^9, 3.8801242163808875`*^9, 
+   3.8801243186701584`*^9, 3.880124389467407*^9, 3.880124646249648*^9, {
+   3.8801246908732405`*^9, 3.880124713793063*^9}, 3.88012517416123*^9, 
+   3.880125277041858*^9, {3.880125517841704*^9, 3.8801255423055334`*^9}, 
+   3.8801256190990267`*^9, 3.880125733509009*^9, 3.880126017261825*^9, 
+   3.8801265651744328`*^9, {3.88012759538296*^9, 3.880127624815239*^9}, {
+   3.8806936072155647`*^9, 3.8806936230307255`*^9}, 3.901192557186391*^9, 
+   3.9011947679948063`*^9, 3.9011974978653955`*^9, 3.901254015444215*^9, 
+   3.9012542924149637`*^9, 3.9012543376694727`*^9, 3.9012550527011924`*^9, 
+   3.901255173561181*^9, 3.901255267439777*^9, 3.9012553128950415`*^9, 
+   3.9012553582167716`*^9, 3.901255393238989*^9, 3.901255691895752*^9, {
+   3.901255750532056*^9, 3.901255780085482*^9}, 3.901255959698228*^9, 
+   3.901256347430724*^9, 3.9012563970187073`*^9, {3.9012568947487974`*^9, 
+   3.901256902666006*^9}, 3.901257006478108*^9, {3.901257076145988*^9, 
+   3.9012570994862666`*^9}, 3.901601410788117*^9, 3.9016029784828343`*^9, 
+   3.9016030205214415`*^9, 3.901603130579645*^9, 3.9016047063275847`*^9, 
+   3.901604894552327*^9, {3.9016896995519943`*^9, 3.9016897227255273`*^9}, 
+   3.901690056580181*^9, 3.901690239864056*^9, {3.9016902729492846`*^9, 
+   3.9016902785702953`*^9}, 3.9016904537163568`*^9, 3.901690484549191*^9},
+ CellLabel->
+  "Out[1090]=",ExpressionUUID->"b2921661-e321-4800-8a65-e393f587d1eb"]
+}, Open  ]]
+},
+WindowSize->{1141.2, 568.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>0.8 Inherited,
+FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (July 9, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"6c4d1c34-ec47-473e-8475-787ec66f8929"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 862, 18, 37, "Input",ExpressionUUID->"fad7a2a8-e2b5-4abf-9dd3-85281d189da2"],
+Cell[1423, 40, 1222, 33, 54, "Input",ExpressionUUID->"fa0b648f-f410-498b-b9fd-78335742fd9f"],
+Cell[CellGroupData[{
+Cell[2670, 77, 2486, 51, 69, "Input",ExpressionUUID->"368e4453-cc4e-4f71-90e7-bad9e27a3390"],
+Cell[5159, 130, 17202, 359, 311, "Output",ExpressionUUID->"834fd9cf-d474-4d57-9c78-6d6605f5d3a4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22398, 494, 1639, 37, 70, "Input",ExpressionUUID->"ef8ab266-46be-4c84-8e7a-dd94ba5af4b4"],
+Cell[24040, 533, 40625, 848, 296, "Output",ExpressionUUID->"ce497b0c-03be-438b-bf92-db4d14f8d10f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64702, 1386, 1796, 40, 69, "Input",ExpressionUUID->"2daf0e61-4c2e-41a2-a2b2-12d131f7db75"],
+Cell[66501, 1428, 31447, 612, 296, "Output",ExpressionUUID->"b2921661-e321-4800-8a65-e393f587d1eb"]
+}, Open  ]]
+}
+]
+*)
+

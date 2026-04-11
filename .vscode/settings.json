@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "iostream": "c",
+        "cmath": "c",
+        "stdio.h": "c",
+        "iosfwd": "c",
+        "xlocale": "c",
+        "xstring": "c",
+        "type_traits": "c",
+        "xtr1common": "c",
+        "math.h": "c",
+        "integration.h": "c",
+        "hermite_data.h": "c",
+        "laguerre_data.h": "c",
+        "legendre_data.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}
